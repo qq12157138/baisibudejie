@@ -24,7 +24,7 @@
     // 设置窗口的根控制器
     self.window.rootViewController = [[ViewController alloc] init];
     
-    // 显示窗口
+    // 显示窗口你好
     [self.window makeKeyAndVisible];
     return YES;
 }
