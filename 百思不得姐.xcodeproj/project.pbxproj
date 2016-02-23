@@ -7,21 +7,89 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E3CA58B1C784F6900B5E45C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA58A1C784F6900B5E45C /* main.m */; };
-		8E3CA58E1C784F6900B5E45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA58D1C784F6900B5E45C /* AppDelegate.m */; };
-		8E3CA5911C784F6900B5E45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3CA5901C784F6900B5E45C /* ViewController.m */; };
+		06C73E5A4073B3D1C365ABB8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7DCB1A5137A72FBFBFFE04 /* libPods.a */; };
 		8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA5A61C78539700B5E45C /* Assets.xcassets */; };
+		8E79440F1C7AEFA300AD9E75 /* SJTEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */; };
+		8E7944101C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79439A1C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m */; };
+		8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943A01C7AEFA300AD9E75 /* SJTMeViewController.m */; };
+		8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943A61C7AEFA300AD9E75 /* SJTNewViewController.m */; };
+		8E7944131C7AEFA300AD9E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943AB1C7AEFA300AD9E75 /* AppDelegate.m */; };
+		8E7944141C7AEFA300AD9E75 /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943AD1C7AEFA300AD9E75 /* Foundation+Log.m */; };
+		8E7944151C7AEFA300AD9E75 /* SJTTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943AF1C7AEFA300AD9E75 /* SJTTool.m */; };
+		8E7944161C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943B11C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m */; };
+		8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943B31C7AEFA300AD9E75 /* UIView+Extension.m */; };
+		8E7944181C7AEFA300AD9E75 /* SJTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943B61C7AEFA300AD9E75 /* SJTTabBarController.m */; };
+		8E79443F1C7AEFA300AD9E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79440A1C7AEFA300AD9E75 /* main.m */; };
+		8E7944401C7AEFA300AD9E75 /* SJTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79440E1C7AEFA300AD9E75 /* SJTTabBar.m */; };
+		8E7944431C7AF9D300AD9E75 /* SJTNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7944421C7AF9D300AD9E75 /* SJTNavigationController.m */; };
+		8E7944451C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7944441C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib */; };
+		8E7944491C7B49E500AD9E75 /* SJTRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7944471C7B49E500AD9E75 /* SJTRecommendViewController.m */; };
+		8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7944481C7B49E500AD9E75 /* SJTRecommendViewController.xib */; };
+		8E79444D1C7B536500AD9E75 /* SJTRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79444C1C7B536500AD9E75 /* SJTRecommendCategory.m */; };
+		8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79444F1C7B558400AD9E75 /* SJTRecommendCategoryCell.m */; };
+		8E7944521C7B558400AD9E75 /* SJTRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7944501C7B558400AD9E75 /* SJTRecommendCategoryCell.xib */; };
+		8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */; };
+		8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */; };
+		8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */; };
+		8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EE90CDA1C7C66A70044BCB8 /* SJTRecommendTagCell.xib */; };
+		8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5232D1C7BFFF100AE987E /* SJTRecommendUserCell.m */; };
+		8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5232E1C7BFFF100AE987E /* SJTRecommendUserCell.xib */; };
+		8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF523321C7C03B500AE987E /* SJTRecommendUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A7DCB1A5137A72FBFBFFE04 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		70CE773352BC0F86BCBEB65C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E3CA5861C784F6900B5E45C /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E3CA58A1C784F6900B5E45C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8E3CA58C1C784F6900B5E45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		8E3CA58D1C784F6900B5E45C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8E3CA58F1C784F6900B5E45C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8E3CA5901C784F6900B5E45C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8E3CA59A1C784F6A00B5E45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E3CA5A61C78539700B5E45C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E7943931C7AEFA300AD9E75 /* SJTEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTEssenceViewController.h; sourceTree = "<group>"; };
+		8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTEssenceViewController.m; sourceTree = "<group>"; };
+		8E7943991C7AEFA300AD9E75 /* SJTFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTFriendTrendsViewController.h; sourceTree = "<group>"; };
+		8E79439A1C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTFriendTrendsViewController.m; sourceTree = "<group>"; };
+		8E79439F1C7AEFA300AD9E75 /* SJTMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTMeViewController.h; sourceTree = "<group>"; };
+		8E7943A01C7AEFA300AD9E75 /* SJTMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTMeViewController.m; sourceTree = "<group>"; };
+		8E7943A51C7AEFA300AD9E75 /* SJTNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTNewViewController.h; sourceTree = "<group>"; };
+		8E7943A61C7AEFA300AD9E75 /* SJTNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTNewViewController.m; sourceTree = "<group>"; };
+		8E7943AA1C7AEFA300AD9E75 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E7943AB1C7AEFA300AD9E75 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E7943AD1C7AEFA300AD9E75 /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		8E7943AE1C7AEFA300AD9E75 /* SJTTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTool.h; sourceTree = "<group>"; };
+		8E7943AF1C7AEFA300AD9E75 /* SJTTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTool.m; sourceTree = "<group>"; };
+		8E7943B01C7AEFA300AD9E75 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		8E7943B11C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		8E7943B21C7AEFA300AD9E75 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		8E7943B31C7AEFA300AD9E75 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		8E7943B51C7AEFA300AD9E75 /* SJTTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTabBarController.h; sourceTree = "<group>"; };
+		8E7943B61C7AEFA300AD9E75 /* SJTTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTabBarController.m; sourceTree = "<group>"; };
+		8E79440A1C7AEFA300AD9E75 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E79440B1C7AEFA300AD9E75 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		8E79440D1C7AEFA300AD9E75 /* SJTTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTabBar.h; sourceTree = "<group>"; };
+		8E79440E1C7AEFA300AD9E75 /* SJTTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTabBar.m; sourceTree = "<group>"; };
+		8E7944411C7AF9D300AD9E75 /* SJTNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTNavigationController.h; sourceTree = "<group>"; };
+		8E7944421C7AF9D300AD9E75 /* SJTNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTNavigationController.m; sourceTree = "<group>"; };
+		8E7944441C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		8E7944461C7B49E500AD9E75 /* SJTRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendViewController.h; sourceTree = "<group>"; };
+		8E7944471C7B49E500AD9E75 /* SJTRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendViewController.m; sourceTree = "<group>"; };
+		8E7944481C7B49E500AD9E75 /* SJTRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendViewController.xib; sourceTree = "<group>"; };
+		8E79444B1C7B536500AD9E75 /* SJTRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendCategory.h; sourceTree = "<group>"; };
+		8E79444C1C7B536500AD9E75 /* SJTRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendCategory.m; sourceTree = "<group>"; };
+		8E79444E1C7B558400AD9E75 /* SJTRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendCategoryCell.h; sourceTree = "<group>"; };
+		8E79444F1C7B558400AD9E75 /* SJTRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendCategoryCell.m; sourceTree = "<group>"; };
+		8E7944501C7B558400AD9E75 /* SJTRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTagsViewController.h; sourceTree = "<group>"; };
+		8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTagsViewController.m; sourceTree = "<group>"; };
+		8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTag.h; sourceTree = "<group>"; };
+		8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTag.m; sourceTree = "<group>"; };
+		8EE90CD81C7C66A70044BCB8 /* SJTRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTagCell.h; sourceTree = "<group>"; };
+		8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTagCell.m; sourceTree = "<group>"; };
+		8EE90CDA1C7C66A70044BCB8 /* SJTRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendTagCell.xib; sourceTree = "<group>"; };
+		8EF5232C1C7BFFF100AE987E /* SJTRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendUserCell.h; sourceTree = "<group>"; };
+		8EF5232D1C7BFFF100AE987E /* SJTRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendUserCell.m; sourceTree = "<group>"; };
+		8EF5232E1C7BFFF100AE987E /* SJTRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendUserCell.xib; sourceTree = "<group>"; };
+		8EF523311C7C03B500AE987E /* SJTRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendUser.h; sourceTree = "<group>"; };
+		8EF523321C7C03B500AE987E /* SJTRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendUser.m; sourceTree = "<group>"; };
+		EB398EDFB0B86D857D61C58B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +97,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06C73E5A4073B3D1C365ABB8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03991D1BFCB7E8A786FBECF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB398EDFB0B86D857D61C58B /* Pods.debug.xcconfig */,
+				70CE773352BC0F86BCBEB65C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8E3CA57D1C784F6900B5E45C = {
 			isa = PBXGroup;
 			children = (
 				8E3CA5881C784F6900B5E45C /* 百思不得姐 */,
 				8E3CA5871C784F6900B5E45C /* Products */,
+				03991D1BFCB7E8A786FBECF5 /* Pods */,
+				F328870682CC8873B94D35AD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,10 +134,7 @@
 		8E3CA5881C784F6900B5E45C /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				8E3CA58C1C784F6900B5E45C /* AppDelegate.h */,
-				8E3CA58D1C784F6900B5E45C /* AppDelegate.m */,
-				8E3CA58F1C784F6900B5E45C /* ViewController.h */,
-				8E3CA5901C784F6900B5E45C /* ViewController.m */,
+				8E7943901C7AEFA300AD9E75 /* Classes */,
 				8E3CA5891C784F6900B5E45C /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -68,9 +145,229 @@
 			children = (
 				8E3CA5A61C78539700B5E45C /* Assets.xcassets */,
 				8E3CA59A1C784F6A00B5E45C /* Info.plist */,
-				8E3CA58A1C784F6900B5E45C /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E7943901C7AEFA300AD9E75 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943911C7AEFA300AD9E75 /* Essence-精华 */,
+				8E7943A31C7AEFA300AD9E75 /* New-新帖 */,
+				8E7943971C7AEFA300AD9E75 /* FriendTrends-关注 */,
+				8E79439D1C7AEFA300AD9E75 /* Me-我 */,
+				8E7943A91C7AEFA300AD9E75 /* Other-其他 */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		8E7943911C7AEFA300AD9E75 /* Essence-精华 */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943921C7AEFA300AD9E75 /* Controller */,
+				8E7943951C7AEFA300AD9E75 /* Model */,
+				8E7943961C7AEFA300AD9E75 /* View */,
+			);
+			path = "Essence-精华";
+			sourceTree = "<group>";
+		};
+		8E7943921C7AEFA300AD9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943931C7AEFA300AD9E75 /* SJTEssenceViewController.h */,
+				8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */,
+				8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */,
+				8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E7943951C7AEFA300AD9E75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */,
+				8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E7943961C7AEFA300AD9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8EE90CD81C7C66A70044BCB8 /* SJTRecommendTagCell.h */,
+				8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */,
+				8EE90CDA1C7C66A70044BCB8 /* SJTRecommendTagCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E7943971C7AEFA300AD9E75 /* FriendTrends-关注 */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943981C7AEFA300AD9E75 /* Controller */,
+				8E79439B1C7AEFA300AD9E75 /* Model */,
+				8E79439C1C7AEFA300AD9E75 /* View */,
+			);
+			path = "FriendTrends-关注";
+			sourceTree = "<group>";
+		};
+		8E7943981C7AEFA300AD9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943991C7AEFA300AD9E75 /* SJTFriendTrendsViewController.h */,
+				8E79439A1C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m */,
+				8E7944441C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib */,
+				8E7944461C7B49E500AD9E75 /* SJTRecommendViewController.h */,
+				8E7944471C7B49E500AD9E75 /* SJTRecommendViewController.m */,
+				8E7944481C7B49E500AD9E75 /* SJTRecommendViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E79439B1C7AEFA300AD9E75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E79444B1C7B536500AD9E75 /* SJTRecommendCategory.h */,
+				8E79444C1C7B536500AD9E75 /* SJTRecommendCategory.m */,
+				8EF523311C7C03B500AE987E /* SJTRecommendUser.h */,
+				8EF523321C7C03B500AE987E /* SJTRecommendUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E79439C1C7AEFA300AD9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E79444E1C7B558400AD9E75 /* SJTRecommendCategoryCell.h */,
+				8E79444F1C7B558400AD9E75 /* SJTRecommendCategoryCell.m */,
+				8E7944501C7B558400AD9E75 /* SJTRecommendCategoryCell.xib */,
+				8EF5232C1C7BFFF100AE987E /* SJTRecommendUserCell.h */,
+				8EF5232D1C7BFFF100AE987E /* SJTRecommendUserCell.m */,
+				8EF5232E1C7BFFF100AE987E /* SJTRecommendUserCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E79439D1C7AEFA300AD9E75 /* Me-我 */ = {
+			isa = PBXGroup;
+			children = (
+				8E79439E1C7AEFA300AD9E75 /* Controller */,
+				8E7943A11C7AEFA300AD9E75 /* Model */,
+				8E7943A21C7AEFA300AD9E75 /* View */,
+			);
+			path = "Me-我";
+			sourceTree = "<group>";
+		};
+		8E79439E1C7AEFA300AD9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E79439F1C7AEFA300AD9E75 /* SJTMeViewController.h */,
+				8E7943A01C7AEFA300AD9E75 /* SJTMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E7943A11C7AEFA300AD9E75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E7943A21C7AEFA300AD9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E7943A31C7AEFA300AD9E75 /* New-新帖 */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943A41C7AEFA300AD9E75 /* Controller */,
+				8E7943A71C7AEFA300AD9E75 /* Model */,
+				8E7943A81C7AEFA300AD9E75 /* View */,
+			);
+			path = "New-新帖";
+			sourceTree = "<group>";
+		};
+		8E7943A41C7AEFA300AD9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943A51C7AEFA300AD9E75 /* SJTNewViewController.h */,
+				8E7943A61C7AEFA300AD9E75 /* SJTNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E7943A71C7AEFA300AD9E75 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E7943A81C7AEFA300AD9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E7943A91C7AEFA300AD9E75 /* Other-其他 */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943AC1C7AEFA300AD9E75 /* Category */,
+				8E7943B41C7AEFA300AD9E75 /* Controller */,
+				8E79440C1C7AEFA300AD9E75 /* View */,
+				8E7943AA1C7AEFA300AD9E75 /* AppDelegate.h */,
+				8E7943AB1C7AEFA300AD9E75 /* AppDelegate.m */,
+				8E79440A1C7AEFA300AD9E75 /* main.m */,
+				8E79440B1C7AEFA300AD9E75 /* PrefixHeader.pch */,
+			);
+			path = "Other-其他";
+			sourceTree = "<group>";
+		};
+		8E7943AC1C7AEFA300AD9E75 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943AD1C7AEFA300AD9E75 /* Foundation+Log.m */,
+				8E7943AE1C7AEFA300AD9E75 /* SJTTool.h */,
+				8E7943AF1C7AEFA300AD9E75 /* SJTTool.m */,
+				8E7943B01C7AEFA300AD9E75 /* UIBarButtonItem+Extension.h */,
+				8E7943B11C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m */,
+				8E7943B21C7AEFA300AD9E75 /* UIView+Extension.h */,
+				8E7943B31C7AEFA300AD9E75 /* UIView+Extension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		8E7943B41C7AEFA300AD9E75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E7943B51C7AEFA300AD9E75 /* SJTTabBarController.h */,
+				8E7943B61C7AEFA300AD9E75 /* SJTTabBarController.m */,
+				8E7944411C7AF9D300AD9E75 /* SJTNavigationController.h */,
+				8E7944421C7AF9D300AD9E75 /* SJTNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E79440C1C7AEFA300AD9E75 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E79440D1C7AEFA300AD9E75 /* SJTTabBar.h */,
+				8E79440E1C7AEFA300AD9E75 /* SJTTabBar.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F328870682CC8873B94D35AD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A7DCB1A5137A72FBFBFFE04 /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,9 +377,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E3CA59D1C784F6A00B5E45C /* Build configuration list for PBXNativeTarget "百思不得姐" */;
 			buildPhases = (
+				72880B51818F9CAD9B14DE87 /* Check Pods Manifest.lock */,
 				8E3CA5821C784F6900B5E45C /* Sources */,
 				8E3CA5831C784F6900B5E45C /* Frameworks */,
 				8E3CA5841C784F6900B5E45C /* Resources */,
+				C7F86F4F1F9AC844D3CCBC9E /* Embed Pods Frameworks */,
+				E1023C6383A5AB4EB0300DB3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +399,7 @@
 		8E3CA57E1C784F6900B5E45C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SJT;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "史江涛";
 				TargetAttributes = {
@@ -131,20 +432,91 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E7944521C7B558400AD9E75 /* SJTRecommendCategoryCell.xib in Resources */,
 				8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */,
+				8E7944451C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib in Resources */,
+				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
+				8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */,
+				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		72880B51818F9CAD9B14DE87 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C7F86F4F1F9AC844D3CCBC9E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E1023C6383A5AB4EB0300DB3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E3CA5821C784F6900B5E45C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E3CA5911C784F6900B5E45C /* ViewController.m in Sources */,
-				8E3CA58E1C784F6900B5E45C /* AppDelegate.m in Sources */,
-				8E3CA58B1C784F6900B5E45C /* main.m in Sources */,
+				8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */,
+				8E79443F1C7AEFA300AD9E75 /* main.m in Sources */,
+				8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */,
+				8E7944101C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m in Sources */,
+				8E7944181C7AEFA300AD9E75 /* SJTTabBarController.m in Sources */,
+				8E7944151C7AEFA300AD9E75 /* SJTTool.m in Sources */,
+				8E79444D1C7B536500AD9E75 /* SJTRecommendCategory.m in Sources */,
+				8E7944431C7AF9D300AD9E75 /* SJTNavigationController.m in Sources */,
+				8E79440F1C7AEFA300AD9E75 /* SJTEssenceViewController.m in Sources */,
+				8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */,
+				8E7944161C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m in Sources */,
+				8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */,
+				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,
+				8E7944401C7AEFA300AD9E75 /* SJTTabBar.m in Sources */,
+				8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */,
+				8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */,
+				8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */,
+				8E7944491C7B49E500AD9E75 /* SJTRecommendViewController.m in Sources */,
+				8E7944131C7AEFA300AD9E75 /* AppDelegate.m in Sources */,
+				8E7944141C7AEFA300AD9E75 /* Foundation+Log.m in Sources */,
+				8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,9 +605,11 @@
 		};
 		8E3CA59E1C784F6A00B5E45C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB398EDFB0B86D857D61C58B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-----";
@@ -245,9 +619,11 @@
 		};
 		8E3CA59F1C784F6A00B5E45C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70CE773352BC0F86BCBEB65C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-----";
@@ -274,6 +650,7 @@
 				8E3CA59F1C784F6A00B5E45C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
