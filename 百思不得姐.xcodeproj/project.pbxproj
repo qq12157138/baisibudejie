@@ -28,6 +28,10 @@
 		8E79444D1C7B536500AD9E75 /* SJTRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79444C1C7B536500AD9E75 /* SJTRecommendCategory.m */; };
 		8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79444F1C7B558400AD9E75 /* SJTRecommendCategoryCell.m */; };
 		8E7944521C7B558400AD9E75 /* SJTRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E7944501C7B558400AD9E75 /* SJTRecommendCategoryCell.xib */; };
+		8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F061C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m */; };
+		8E922F0F1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E922F071C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib */; };
+		8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */; };
+		8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */; };
 		8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */; };
 		8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */; };
 		8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */; };
@@ -77,6 +81,13 @@
 		8E79444E1C7B558400AD9E75 /* SJTRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendCategoryCell.h; sourceTree = "<group>"; };
 		8E79444F1C7B558400AD9E75 /* SJTRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendCategoryCell.m; sourceTree = "<group>"; };
 		8E7944501C7B558400AD9E75 /* SJTRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		8E922F051C7DA1FA004CF9CE /* SJTLoginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTLoginRegisterViewController.h; sourceTree = "<group>"; };
+		8E922F061C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTLoginRegisterViewController.m; sourceTree = "<group>"; };
+		8E922F071C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTLoginRegisterViewController.xib; sourceTree = "<group>"; };
+		8E922F0A1C7DA1FA004CF9CE /* SJTTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTextField.h; sourceTree = "<group>"; };
+		8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTextField.m; sourceTree = "<group>"; };
+		8E922F0C1C7DA1FA004CF9CE /* SJTVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTVerticalButton.h; sourceTree = "<group>"; };
+		8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTVerticalButton.m; sourceTree = "<group>"; };
 		8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTagsViewController.h; sourceTree = "<group>"; };
 		8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTagsViewController.m; sourceTree = "<group>"; };
 		8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTag.h; sourceTree = "<group>"; };
@@ -152,6 +163,7 @@
 		8E7943901C7AEFA300AD9E75 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8E922F031C7DA1FA004CF9CE /* Login-登录 */,
 				8E7943911C7AEFA300AD9E75 /* Essence-精华 */,
 				8E7943A31C7AEFA300AD9E75 /* New-新帖 */,
 				8E7943971C7AEFA300AD9E75 /* FriendTrends-关注 */,
@@ -362,6 +374,44 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8E922F031C7DA1FA004CF9CE /* Login-登录 */ = {
+			isa = PBXGroup;
+			children = (
+				8E922F041C7DA1FA004CF9CE /* Controller */,
+				8E922F081C7DA1FA004CF9CE /* Model */,
+				8E922F091C7DA1FA004CF9CE /* View */,
+			);
+			path = "Login-登录";
+			sourceTree = "<group>";
+		};
+		8E922F041C7DA1FA004CF9CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E922F051C7DA1FA004CF9CE /* SJTLoginRegisterViewController.h */,
+				8E922F061C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m */,
+				8E922F071C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E922F081C7DA1FA004CF9CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E922F091C7DA1FA004CF9CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E922F0A1C7DA1FA004CF9CE /* SJTTextField.h */,
+				8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */,
+				8E922F0C1C7DA1FA004CF9CE /* SJTVerticalButton.h */,
+				8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F328870682CC8873B94D35AD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +488,7 @@
 				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
 				8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */,
 				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
+				8E922F0F1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */,
 				8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */,
 				8E79443F1C7AEFA300AD9E75 /* main.m in Sources */,
 				8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */,
@@ -508,7 +560,9 @@
 				8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */,
 				8E7944161C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m in Sources */,
 				8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */,
+				8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */,
 				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,
+				8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */,
 				8E7944401C7AEFA300AD9E75 /* SJTTabBar.m in Sources */,
 				8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */,
 				8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */,
