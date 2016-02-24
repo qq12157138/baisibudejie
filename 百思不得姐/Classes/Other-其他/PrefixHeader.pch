@@ -1,0 +1,31 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 史江涛 on 16/2/22.
+//  Copyright © 2016年 史江涛. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define SJTColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define SJTRandomColor SJTColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+#ifdef DEBUG   // 开发阶段
+#define SJTLog(...) NSLog(__VA_ARGS__)
+#else          // 发布阶段
+#define SJTLog(...)
+#endif
+
+#define SJTLogFunc SJTLog(@"%s", __func__)
+
+#define SJTGlobalBg SJTColor(223, 223, 223)
+
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+Extension.h"
+#endif /* PrefixHeader_pch */
