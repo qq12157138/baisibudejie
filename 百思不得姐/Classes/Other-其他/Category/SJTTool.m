@@ -7,6 +7,7 @@
 //
 
 #import "SJTTool.h"
+#import <Accelerate/Accelerate.h>
 
 #define HMFileBoundary @"heima"
 #define HMNewLien @"\r\n"
@@ -17,7 +18,7 @@
 // 系统版本号
 - (void)setCurrentVersion:(NSString *)currentVersion {
 //    [UIDevice currentDevice].systemVersion;
-    _currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
+    _sjt_currentVersion = [NSBundle mainBundle].infoDictionary[@"CFBundleVersion"];
 }
 
 /**
@@ -26,7 +27,7 @@
  @param directory 哪个目录
  @param fileName  文件名称
  */
-+ (NSString *)path:(NSSearchPathDirectory)directory fileName:(NSString *)fileName {
++ (NSString *)sjt_path:(NSSearchPathDirectory)directory fileName:(NSString *)fileName {
     if (fileName) {
         return [[NSSearchPathForDirectoriesInDomains(directory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:fileName];
     } else {
@@ -40,8 +41,9 @@
  @param new 是新版本
  @param old 旧版本
  */
-+ (void)isNewVsersion:(void (^)(void))new oldVersion:(void (^)(void))old {
-    NSString *key = @"CFBundleVersion";
++ (void)sjt_isNewVsersion:(void (^)(void))new oldVersion:(void (^)(void))old {
+//    NSString *key = @"CFBundleVersion"; // 大版本
+    NSString *key = @"CFBundleShortVersionString";  // 小版本
     // 存储在沙盒中的版本号（上一次使用版本）
     NSString *lastVersion = [[NSUserDefaults standardUserDefaults] objectForKey:key];
     // 当前软件的版本号（从info.plish中获得）
@@ -61,7 +63,7 @@
  
  - parameter view: 只要父类是UIView都行
  */
-+ (void)shakeForErro:(UIView *)view {
++ (void)sjt_shakeForErro:(UIView *)view {
     CAKeyframeAnimation *anim = [[CAKeyframeAnimation alloc] init];
     anim.keyPath = @"position";
     
@@ -84,7 +86,7 @@
  
  - parameter view: 只要父类是UIView都行
  */
-+ (void)tremble:(UIView *)view {
++ (void)sjt_tremble:(UIView *)view {
     CAKeyframeAnimation *anim = [[CAKeyframeAnimation alloc] init];
     anim.keyPath = @"transform.rotation";
     // 角度转弧度： -5 / 180 * M_PI
@@ -100,7 +102,7 @@
  - parameter data: 服务器json数据
  - returns: 解析出来的集合群
  */
-+ (NSArray *)JSONWithNSArray:(NSData *)data {
++ (NSArray *)sjt_JSONWithNSArray:(NSData *)data {
     NSArray *jsonArr = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
     return jsonArr;
 }
@@ -110,7 +112,7 @@
  - parameter data: 服务器json数据
  - returns: 解析出来的集合群
  */
-+ (NSDictionary *)JSONWithNSDictionary:(NSData *)data {
++ (NSDictionary *)sjt_JSONWithNSDictionary:(NSData *)data {
     NSDictionary *jsonArr = [NSJSONSerialization JSONObjectWithData:data options:(NSJSONReadingMutableContainers) error:nil];
     return jsonArr;
 }
@@ -121,7 +123,7 @@
  - parameter patch: 要上传的文件路径
  - returns: 要上传的文件MIMEType值
  */
-- (NSString *)MIMEType:(NSURL *)url
+- (NSString *)sjt_MIMEType:(NSURL *)url
 {
     // 1.创建一个请求
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
@@ -144,7 +146,7 @@
  
  - returns: 返回的是request对象
  */
-- (void)uploadWithFilename:(NSString *)filename mimeType:(NSString *)mimeType fileData:(NSData *)fileData params:(NSDictionary *)params NSURLConnectionBlock:(void (^)(NSURLResponse *response, NSData *data, NSError *connectionError))block
+- (void)sjt_uploadWithFilename:(NSString *)filename mimeType:(NSString *)mimeType fileData:(NSData *)fileData params:(NSDictionary *)params NSURLConnectionBlock:(void (^)(NSURLResponse *response, NSData *data, NSError *connectionError))block
 {
     // 1.请求路径
     NSURL *url = [NSURL URLWithString:@"http://192.168.15.172:8080/MJServer/upload"];
@@ -211,7 +213,7 @@
  - parameter url:      包含请求头的url
  - parameter block:    返回客户端请求的主机地址 和 拆分好的参数
  */
-+ (void)getUrlValueWithHttpHead:(NSString *)httpHead url:(NSString *)url block:(void (^)(NSString *selector, NSDictionary *dict))block {
++ (void)sjt_getUrlValueWithHttpHead:(NSString *)httpHead url:(NSString *)url block:(void (^)(NSString *selector, NSDictionary *dict))block {
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     NSArray *split = [url componentsSeparatedByString:@"?"];
     if (split.count > 1){
@@ -238,6 +240,7 @@
 @end
 
 @implementation UIImage (SJT)
+
 /**
  圆形头像
  
@@ -245,7 +248,7 @@
  - parameter border:      图片边框宽度
  - parameter borderColor: 图片边框颜色
  */
-+ (UIImage *)imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor {
++ (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor {
     // 圆环的宽度
     CGFloat borderW = border;
     
@@ -297,7 +300,7 @@
  - parameter view: 需要截屏的视图
  - returns: 截取屏幕生成的图片
  */
-+ (UIImage *)imageWithCaptureView:(UIView *)view {
++ (UIImage *)sjt_imageWithCaptureView:(UIView *)view {
     // 开启上下文
     UIGraphicsBeginImageContextWithOptions(view.bounds.size, NO, 0.0);
     
@@ -323,7 +326,7 @@
  - parameter image: 要拉伸的图片
  - returns: 拉伸完成的图片
  */
-+ (UIImage *)imageWithResizable:(UIImage *)image {
++ (UIImage *)sjt_imageWithResizable:(UIImage *)image {
     image = [image stretchableImageWithLeftCapWidth:(image.size.width * 0.5) topCapHeight:(image.size.height * 0.5)];
     return image;
 }
@@ -334,7 +337,7 @@
  - parameter size: 要把图显示到多大区域，如：CGSizeMake(300, 140)
  - returns: 缩放好的图片
  */
-- (UIImage *) imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size{
+- (UIImage *)sjt_imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size{
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;
     CGFloat width = imageSize.width;
@@ -388,7 +391,7 @@
  - parameter defineWidth: 要显示的宽度
  - returns: 缩放好的图片
  */
-- (UIImage *) imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth{
+- (UIImage *)sjt_imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth{
     UIImage *newImage = nil;
     CGSize imageSize = sourceImage.size;
     CGFloat width = imageSize.width;
@@ -434,5 +437,105 @@
     return newImage;
 }
 
+/**
+ *  加模糊效果函数，传入参数：image是图片，blur是模糊度（0~2.0之间）
+ */
+- (UIImage *)sjt_blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur{
+    //模糊度,
+    if ((blur < 0.1f) || (blur > 2.0f)){
+        blur = 0.5f;
+    }
+    
+    //boxSize必须大于0
+    int boxSize = (int)(blur * 100);
+    boxSize -= (boxSize % 2) + 1;
+    
+    NSLog(@"boxSize:%i",boxSize);
+    
+    //图像处理
+    CGImageRef img = image.CGImage;
+    
+    //图像缓存,输入缓存，输出缓存
+    vImage_Buffer inBuffer, outBuffer;
+    
+    vImage_Error error;
+    
+    //像素缓存
+    void *pixelBuffer;
+    
+    //数据源提供者，Defines an opaque type that supplies Quartz with data.
+    CGDataProviderRef inProvider = CGImageGetDataProvider(img);
+    CFDataRef inBitmapData = CGDataProviderCopyData(inProvider);
+    
+    //宽，高，字节/行，data
+    inBuffer.width = CGImageGetWidth(img);
+    
+    inBuffer.height = CGImageGetHeight(img);
+    
+    inBuffer.rowBytes = CGImageGetBytesPerRow(img);
+    
+    inBuffer.data = (void*)CFDataGetBytePtr(inBitmapData);
+    
+    //像数缓存，字节行*图片高
+    pixelBuffer = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
+    
+    outBuffer.data = pixelBuffer;
+    
+    outBuffer.width = CGImageGetWidth(img);
+    
+    outBuffer.height = CGImageGetHeight(img);
+    
+    outBuffer.rowBytes = CGImageGetBytesPerRow(img);
+    
+    // 第三个中间的缓存区,抗锯齿的效果
+    void *pixelBuffer2 = malloc(CGImageGetBytesPerRow(img) * CGImageGetHeight(img));
+    
+    vImage_Buffer outBuffer2;
+    
+    outBuffer2.data = pixelBuffer2;
+    
+    outBuffer2.width = CGImageGetWidth(img);
+    
+    outBuffer2.height = CGImageGetHeight(img);
+    
+    outBuffer2.rowBytes = CGImageGetBytesPerRow(img);
+    
+    //将一个隐式的M×N区域颗粒和具有箱式滤波器的效果的ARGB8888源图像进行卷积运算得到作用区域。
+    error = vImageBoxConvolve_ARGB8888(&inBuffer, &outBuffer2, NULL, 0, 0, boxSize, boxSize, NULL, kvImageEdgeExtend);
+    
+    error = vImageBoxConvolve_ARGB8888(&outBuffer2, &inBuffer, NULL, 0, 0, boxSize, boxSize, NULL, kvImageEdgeExtend);
+    
+    error = vImageBoxConvolve_ARGB8888(&inBuffer, &outBuffer, NULL, 0, 0, boxSize, boxSize, NULL, kvImageEdgeExtend);
+    
+    if (error){
+        NSLog(@"error from convolution %ld", error);
+    }
+    
+    //颜色空间DeviceRGB
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    
+    //用图片创建上下文,CGImageGetBitsPerComponent(img),7,8
+    CGContextRef ctx = CGBitmapContextCreate(outBuffer.data, outBuffer.width, outBuffer.height, 8, outBuffer.rowBytes, colorSpace, CGImageGetBitmapInfo(image.CGImage));
+    
+    //根据上下文，处理过的图片，重新组件
+    CGImageRef imageRef = CGBitmapContextCreateImage (ctx);
+    
+    UIImage *returnImage = [UIImage imageWithCGImage:imageRef];
+    
+    //clean up
+    CGContextRelease(ctx);
+    
+    CGColorSpaceRelease(colorSpace);
+    
+    free(pixelBuffer);
+    
+    free(pixelBuffer2);
+    
+    CFRelease(inBitmapData);
+    
+    CGImageRelease(imageRef);
+    
+    return returnImage;
+}
 @end
 

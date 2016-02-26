@@ -92,7 +92,6 @@ static NSString * const SJTUserID = @"user";
 - (void)setupRefresh {
     self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
     self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
-    self.userTableView.mj_footer.hidden = YES;
 }
 
 /**

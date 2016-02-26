@@ -14,79 +14,84 @@
 /**
  系统版本号
  */
-@property (nonatomic, copy) NSString *currentVersion;
+@property (nonatomic, copy) NSString *sjt_currentVersion;
 
 /**
  获取沙盒的Caches的文件夹路径
  */
-+ (NSString *)path:(NSSearchPathDirectory)directory fileName:(NSString *)fileName;
++ (NSString *)sjt_path:(NSSearchPathDirectory)directory fileName:(NSString *)fileName;
 
 /**
  是否是新版本（第一次加载）
  */
-+ (void)isNewVsersion:(void (^)(void))new oldVersion:(void (^)(void))old;
++ (void)sjt_isNewVsersion:(void (^)(void))new oldVersion:(void (^)(void))old;
 
 /**
  错误抖动
  */
-+ (void)shakeForErro:(UIView *)view;
++ (void)sjt_shakeForErro:(UIView *)view;
 
 /**
  颤抖（类似IOS图标抖动）
  */
-+ (void)tremble:(UIView *)view;
++ (void)sjt_tremble:(UIView *)view;
 
 /**
  解析JSON数据（父节点是[]）
  */
-+ (NSArray *)JSONWithNSArray:(NSData *)data;
++ (NSArray *)sjt_JSONWithNSArray:(NSData *)data;
 
 /**
  解析JSON数据（父节点是{}）
  */
-+ (NSDictionary *)JSONWithNSDictionary:(NSData *)data;
++ (NSDictionary *)sjt_JSONWithNSDictionary:(NSData *)data;
 
 /**
  获取MIMEType值
  */
-- (NSString *)MIMEType:(NSURL *)url;
+- (NSString *)sjt_MIMEType:(NSURL *)url;
 
 /**
  单上传文件
  */
-- (void)uploadWithFilename:(NSString *)filename mimeType:(NSString *)mimeType fileData:(NSData *)fileData params:(NSDictionary *)params NSURLConnectionBlock:(void (^)(NSURLResponse *response, NSData *data, NSError *connectionError))block;
+- (void)sjt_uploadWithFilename:(NSString *)filename mimeType:(NSString *)mimeType fileData:(NSData *)fileData params:(NSDictionary *)params NSURLConnectionBlock:(void (^)(NSURLResponse *response, NSData *data, NSError *connectionError))block;
 
 /**
  对HTTP请求的url进行截取、拆分处理（主要用于JS调IOS代码）
  */
-+ (void)getUrlValueWithHttpHead:(NSString *)httpHead url:(NSString *)url block:(void (^)(NSString *selector, NSDictionary *dict))block;
++ (void)sjt_getUrlValueWithHttpHead:(NSString *)httpHead url:(NSString *)url block:(void (^)(NSString *selector, NSDictionary *dict))block;
 
 @end
 
 @interface UIImage (SJT)
 /**
+ *  加模糊效果函数，传入参数：image是图片，blur是模糊度（0~2.0之间）
+ */
+- (UIImage *)sjt_blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
+
+/**
  圆形头像
  */
-+ (UIImage *)imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor ;
++ (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor ;
 
 /**
  截屏
  */
-+ (UIImage *)imageWithCaptureView:(UIView *)view;
++ (UIImage *)sjt_imageWithCaptureView:(UIView *)view;
 
 /**
  拉伸图片
  */
-+ (UIImage *)imageWithResizable:(UIImage *)image;
++ (UIImage *)sjt_imageWithResizable:(UIImage *)image;
 
 /**
  按比例缩放图片
  */
-- (UIImage *) imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
+- (UIImage *)sjt_imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
 
 /**
  指定宽度按比例缩放图片
  */
-- (UIImage *) imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
+- (UIImage *)sjt_imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
 
 @end

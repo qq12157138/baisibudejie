@@ -32,6 +32,18 @@
 		8E922F0F1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E922F071C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib */; };
 		8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */; };
 		8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */; };
+		8E922F141C7DB3A5004CF9CE /* SJTPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E922F131C7DB3A5004CF9CE /* SJTPushGuideView.m */; };
+		8E922F161C7DB3B6004CF9CE /* SJTPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */; };
+		8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */; };
+		8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */; };
+		8EBF0C501C7ED10B001C6817 /* SJTAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C4F1C7ED10B001C6817 /* SJTAllViewController.m */; };
+		8EBF0C531C7ED121001C6817 /* SJTVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C521C7ED121001C6817 /* SJTVideoViewController.m */; };
+		8EBF0C561C7ED13A001C6817 /* SJTVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C551C7ED13A001C6817 /* SJTVoiceViewController.m */; };
+		8EBF0C591C7ED151001C6817 /* SJTPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C581C7ED151001C6817 /* SJTPictureViewController.m */; };
+		8EBF0C5C1C7ED160001C6817 /* SJTWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C5B1C7ED160001C6817 /* SJTWordViewController.m */; };
+		8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C5E1C7F022C001C6817 /* SJTTItleButton.m */; };
+		8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C611C7F3666001C6817 /* SJTTopic.m */; };
+		8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C641C7F4A38001C6817 /* SJTConst.m */; };
 		8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */; };
 		8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */; };
 		8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */; };
@@ -39,6 +51,8 @@
 		8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF5232D1C7BFFF100AE987E /* SJTRecommendUserCell.m */; };
 		8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EF5232E1C7BFFF100AE987E /* SJTRecommendUserCell.xib */; };
 		8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF523321C7C03B500AE987E /* SJTRecommendUser.m */; };
+		8EFBD3811C801B45000F5379 /* NSDate+SJTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBD3801C801B45000F5379 /* NSDate+SJTExtension.m */; };
+		8EFBD3841C803171000F5379 /* SJTTopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBD3831C803171000F5379 /* SJTTopicViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +102,28 @@
 		8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTextField.m; sourceTree = "<group>"; };
 		8E922F0C1C7DA1FA004CF9CE /* SJTVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTVerticalButton.h; sourceTree = "<group>"; };
 		8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTVerticalButton.m; sourceTree = "<group>"; };
+		8E922F121C7DB3A5004CF9CE /* SJTPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPushGuideView.h; sourceTree = "<group>"; };
+		8E922F131C7DB3A5004CF9CE /* SJTPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPushGuideView.m; sourceTree = "<group>"; };
+		8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTPushGuideView.xib; sourceTree = "<group>"; };
+		8E9567251C7FF3BD00C3B908 /* SJTTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicCell.h; sourceTree = "<group>"; };
+		8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicCell.m; sourceTree = "<group>"; };
+		8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTTopicCell.xib; sourceTree = "<group>"; };
+		8EBF0C4E1C7ED10B001C6817 /* SJTAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTAllViewController.h; sourceTree = "<group>"; };
+		8EBF0C4F1C7ED10B001C6817 /* SJTAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTAllViewController.m; sourceTree = "<group>"; };
+		8EBF0C511C7ED121001C6817 /* SJTVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTVideoViewController.h; sourceTree = "<group>"; };
+		8EBF0C521C7ED121001C6817 /* SJTVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTVideoViewController.m; sourceTree = "<group>"; };
+		8EBF0C541C7ED13A001C6817 /* SJTVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTVoiceViewController.h; sourceTree = "<group>"; };
+		8EBF0C551C7ED13A001C6817 /* SJTVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTVoiceViewController.m; sourceTree = "<group>"; };
+		8EBF0C571C7ED151001C6817 /* SJTPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPictureViewController.h; sourceTree = "<group>"; };
+		8EBF0C581C7ED151001C6817 /* SJTPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPictureViewController.m; sourceTree = "<group>"; };
+		8EBF0C5A1C7ED160001C6817 /* SJTWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTWordViewController.h; sourceTree = "<group>"; };
+		8EBF0C5B1C7ED160001C6817 /* SJTWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTWordViewController.m; sourceTree = "<group>"; };
+		8EBF0C5D1C7F022C001C6817 /* SJTTItleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTItleButton.h; sourceTree = "<group>"; };
+		8EBF0C5E1C7F022C001C6817 /* SJTTItleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTItleButton.m; sourceTree = "<group>"; };
+		8EBF0C601C7F3666001C6817 /* SJTTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopic.h; sourceTree = "<group>"; };
+		8EBF0C611C7F3666001C6817 /* SJTTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopic.m; sourceTree = "<group>"; };
+		8EBF0C631C7F4A38001C6817 /* SJTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTConst.h; sourceTree = "<group>"; };
+		8EBF0C641C7F4A38001C6817 /* SJTConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTConst.m; sourceTree = "<group>"; };
 		8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTagsViewController.h; sourceTree = "<group>"; };
 		8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTagsViewController.m; sourceTree = "<group>"; };
 		8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTag.h; sourceTree = "<group>"; };
@@ -100,6 +136,10 @@
 		8EF5232E1C7BFFF100AE987E /* SJTRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTRecommendUserCell.xib; sourceTree = "<group>"; };
 		8EF523311C7C03B500AE987E /* SJTRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendUser.h; sourceTree = "<group>"; };
 		8EF523321C7C03B500AE987E /* SJTRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendUser.m; sourceTree = "<group>"; };
+		8EFBD37F1C801B45000F5379 /* NSDate+SJTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+SJTExtension.h"; sourceTree = "<group>"; };
+		8EFBD3801C801B45000F5379 /* NSDate+SJTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+SJTExtension.m"; sourceTree = "<group>"; };
+		8EFBD3821C803171000F5379 /* SJTTopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicViewController.h; sourceTree = "<group>"; };
+		8EFBD3831C803171000F5379 /* SJTTopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicViewController.m; sourceTree = "<group>"; };
 		EB398EDFB0B86D857D61C58B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +230,18 @@
 				8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */,
 				8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */,
 				8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */,
+				8EBF0C4E1C7ED10B001C6817 /* SJTAllViewController.h */,
+				8EBF0C4F1C7ED10B001C6817 /* SJTAllViewController.m */,
+				8EBF0C511C7ED121001C6817 /* SJTVideoViewController.h */,
+				8EBF0C521C7ED121001C6817 /* SJTVideoViewController.m */,
+				8EBF0C541C7ED13A001C6817 /* SJTVoiceViewController.h */,
+				8EBF0C551C7ED13A001C6817 /* SJTVoiceViewController.m */,
+				8EBF0C571C7ED151001C6817 /* SJTPictureViewController.h */,
+				8EBF0C581C7ED151001C6817 /* SJTPictureViewController.m */,
+				8EBF0C5A1C7ED160001C6817 /* SJTWordViewController.h */,
+				8EBF0C5B1C7ED160001C6817 /* SJTWordViewController.m */,
+				8EFBD3821C803171000F5379 /* SJTTopicViewController.h */,
+				8EFBD3831C803171000F5379 /* SJTTopicViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,6 +251,8 @@
 			children = (
 				8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */,
 				8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */,
+				8EBF0C601C7F3666001C6817 /* SJTTopic.h */,
+				8EBF0C611C7F3666001C6817 /* SJTTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +263,11 @@
 				8EE90CD81C7C66A70044BCB8 /* SJTRecommendTagCell.h */,
 				8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */,
 				8EE90CDA1C7C66A70044BCB8 /* SJTRecommendTagCell.xib */,
+				8EBF0C5D1C7F022C001C6817 /* SJTTItleButton.h */,
+				8EBF0C5E1C7F022C001C6817 /* SJTTItleButton.m */,
+				8E9567251C7FF3BD00C3B908 /* SJTTopicCell.h */,
+				8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */,
+				8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -336,6 +395,8 @@
 				8E7943AB1C7AEFA300AD9E75 /* AppDelegate.m */,
 				8E79440A1C7AEFA300AD9E75 /* main.m */,
 				8E79440B1C7AEFA300AD9E75 /* PrefixHeader.pch */,
+				8EBF0C631C7F4A38001C6817 /* SJTConst.h */,
+				8EBF0C641C7F4A38001C6817 /* SJTConst.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -350,6 +411,8 @@
 				8E7943B11C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m */,
 				8E7943B21C7AEFA300AD9E75 /* UIView+Extension.h */,
 				8E7943B31C7AEFA300AD9E75 /* UIView+Extension.m */,
+				8EFBD37F1C801B45000F5379 /* NSDate+SJTExtension.h */,
+				8EFBD3801C801B45000F5379 /* NSDate+SJTExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -370,6 +433,9 @@
 			children = (
 				8E79440D1C7AEFA300AD9E75 /* SJTTabBar.h */,
 				8E79440E1C7AEFA300AD9E75 /* SJTTabBar.m */,
+				8E922F121C7DB3A5004CF9CE /* SJTPushGuideView.h */,
+				8E922F131C7DB3A5004CF9CE /* SJTPushGuideView.m */,
+				8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -486,9 +552,11 @@
 				8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */,
 				8E7944451C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib in Resources */,
 				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
+				8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */,
 				8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */,
 				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
 				8E922F0F1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib in Resources */,
+				8E922F161C7DB3B6004CF9CE /* SJTPushGuideView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -547,10 +615,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EBF0C5C1C7ED160001C6817 /* SJTWordViewController.m in Sources */,
+				8EBF0C531C7ED121001C6817 /* SJTVideoViewController.m in Sources */,
+				8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */,
 				8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */,
+				8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */,
 				8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */,
+				8EBF0C501C7ED10B001C6817 /* SJTAllViewController.m in Sources */,
 				8E79443F1C7AEFA300AD9E75 /* main.m in Sources */,
 				8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */,
+				8EBF0C591C7ED151001C6817 /* SJTPictureViewController.m in Sources */,
 				8E7944101C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m in Sources */,
 				8E7944181C7AEFA300AD9E75 /* SJTTabBarController.m in Sources */,
 				8E7944151C7AEFA300AD9E75 /* SJTTool.m in Sources */,
@@ -559,10 +633,14 @@
 				8E79440F1C7AEFA300AD9E75 /* SJTEssenceViewController.m in Sources */,
 				8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */,
 				8E7944161C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m in Sources */,
+				8EFBD3841C803171000F5379 /* SJTTopicViewController.m in Sources */,
 				8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */,
 				8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */,
 				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,
 				8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */,
+				8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */,
+				8EFBD3811C801B45000F5379 /* NSDate+SJTExtension.m in Sources */,
+				8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */,
 				8E7944401C7AEFA300AD9E75 /* SJTTabBar.m in Sources */,
 				8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */,
 				8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */,
@@ -570,6 +648,8 @@
 				8E7944491C7B49E500AD9E75 /* SJTRecommendViewController.m in Sources */,
 				8E7944131C7AEFA300AD9E75 /* AppDelegate.m in Sources */,
 				8E7944141C7AEFA300AD9E75 /* Foundation+Log.m in Sources */,
+				8EBF0C561C7ED13A001C6817 /* SJTVoiceViewController.m in Sources */,
+				8E922F141C7DB3A5004CF9CE /* SJTPushGuideView.m in Sources */,
 				8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -665,8 +745,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcast.zhlx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -679,8 +760,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other-其他/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itcast.-----";
+				PRODUCT_BUNDLE_IDENTIFIER = com.itcast.zhlx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

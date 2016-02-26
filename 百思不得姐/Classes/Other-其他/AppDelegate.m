@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "SJTTabBarController.h"
+#import "SJTPushGuideView.h"
+#import "SJTTool.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +28,14 @@
     
     // 显示窗口
     [self.window makeKeyAndVisible];
+    
+    // 显示推送指南
+    [SJTTool sjt_isNewVsersion:^{
+        SJTPushGuideView *guideView = [SJTPushGuideView guideView];
+        guideView.frame = self.window.bounds;
+        [self.window addSubview:guideView];
+    } oldVersion:nil];
+    
     return YES;
 }
 
