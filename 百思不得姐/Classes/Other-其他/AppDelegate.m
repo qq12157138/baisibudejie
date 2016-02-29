@@ -10,6 +10,7 @@
 #import "SJTTabBarController.h"
 #import "SJTPushGuideView.h"
 #import "SJTTool.h"
+#import <SDWebImageManager.h>
 
 @interface AppDelegate ()
 
@@ -37,6 +38,15 @@
     } oldVersion:nil];
     
     return YES;
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
+    #warning 用了SDWebImage框架需要处理内存
+    // 1.取消下载
+    SDWebImageManager *manager =[SDWebImageManager sharedManager];
+    [manager cancelAll];
+    // 2.清除内存中所有图片
+    [manager.imageCache clearMemory];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

@@ -14,6 +14,7 @@
 #import <MJExtension.h>
 #import <MJRefresh.h>
 #import "SJTTopicCell.h"
+#import "SJTShowPictureView.h"
 
 @interface SJTTopicViewController ()
 
@@ -32,11 +33,6 @@
 @end
 
 @implementation SJTTopicViewController
-
-// get方法交给子类去实现
-- (NSString *)type {
-    return nil;
-}
 
 - (NSMutableArray *)topics {
     if (!_topics) {
@@ -78,8 +74,13 @@ static NSString * const SJTTopicCellId = @"topic";
     
     // 注册nib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SJTTopicCell class]) bundle:nil] forCellReuseIdentifier:SJTTopicCellId];
+    
 }
 
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 #pragma mark - 数据处理
 /**
  *  加载新的帖子数据
@@ -92,14 +93,14 @@ static NSString * const SJTTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     self.params = params;
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (self.params != params) return;
         // 存储maxtime
         self.maxtime = responseObject[@"info"][@"maxtime"];
-        SJTLog(@"%@", responseObject);
+        
         // 字典转模型
         self.topics = [SJTTopic mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
@@ -133,7 +134,7 @@ static NSString * const SJTTopicCellId = @"topic";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"data";
-    params[@"type"] = self.type;
+    params[@"type"] = @(self.type);
     params[@"page"] = @(self.page);
     params[@"maxtime"] = self.maxtime;
     self.params = params;
@@ -180,7 +181,11 @@ static NSString * const SJTTopicCellId = @"topic";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 200;
+    // 取出帖子模型
+    SJTTopic *topic = self.topics[indexPath.row];
+    
+    // 返回这个模型对应的cell高度
+    return topic.cellHeight;
 }
 
 @end

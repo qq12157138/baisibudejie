@@ -9,6 +9,7 @@
 #import "SJTTopicCell.h"
 #import <UIImageView+WebCache.h>
 #import "SJTTopic.h"
+#import "SJTTopicPictureView.h"
 
 @interface SJTTopicCell ()
 /** 头像 */
@@ -28,10 +29,26 @@
 
 /** 新浪加V */
 @property (weak, nonatomic) IBOutlet UIImageView *sinaVView;
+/** 帖子文字内容 */
+@property (weak, nonatomic) IBOutlet UILabel *text_label;
+
+/** 图片帖子中间的内容 */
+@property (nonatomic, weak) SJTTopicPictureView *pictureView;
 
 @end
 
 @implementation SJTTopicCell
+
+- (SJTTopicPictureView *)pictureView {
+    if (!_pictureView) {
+        // 因为是weak弱指针，所以不能直接赋值，所以一开始就加进去就行
+//        self.pictureView = [SJTTopicPictureView pictureView];
+        SJTTopicPictureView *pictureView = [SJTTopicPictureView pictureView];
+        [self.contentView addSubview:pictureView];
+        _pictureView = pictureView;
+    }
+    return _pictureView;
+}
 
 - (void)awakeFromNib {
     UIImageView *bgView = [[UIImageView alloc] init];
@@ -60,6 +77,17 @@
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
     
+    // 设置帖子文字内容
+    self.text_label.text = topic.text;
+    
+    // 根据模型类型（帖子类型）添加对应的内容到cell中间
+    if (topic.type == SJTTopicPicture) {    // 图片帖子
+        self.pictureView.topic = topic;
+        #warning 如果发现你设置的尺寸正确，但是显示的不正确，一般是autoresizing属性影响它了
+        self.pictureView.frame = topic.pictureViewFrame;
+    } else if (topic.type == SJTTopicVoice) {
+        
+    }
 }
 
 //- (void)testDate:(NSString *)create_time {
@@ -98,16 +126,12 @@
 
 /**
  *  重写frame给cell添加边距（也就是为了不让cell粘在一起）
- *
- *  @param frame <#frame description#>
  */
 - (void)setFrame:(CGRect)frame {
-    static CGFloat margin = 10;
-    
-    frame.origin.x = margin;
-    frame.size.width -= margin * 2;
-    frame.size.height -= margin;
-    frame.origin.y += margin;
+    frame.origin.x = SJTTopicCellMargin;
+    frame.size.width -= SJTTopicCellMargin * 2;
+    frame.size.height -= SJTTopicCellMargin;
+    frame.origin.y += SJTTopicCellMargin;
     
     [super setFrame:frame];
 }

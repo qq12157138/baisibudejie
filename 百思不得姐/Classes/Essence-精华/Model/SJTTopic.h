@@ -6,7 +6,7 @@
 //  Copyright © 2016年 史江涛. All rights reserved.
 //  帖子
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface SJTTopic : NSObject
 
@@ -36,5 +36,30 @@
 
 /** 是否为新浪的加V用户 */
 @property (nonatomic, assign, getter=isSina_v) BOOL sina_v;
+
+/** 小图片的路径 */
+@property (nonatomic, copy) NSString *samll_image;
+/** 大图片的路径 */
+@property (nonatomic, copy) NSString *large_image;
+/** 中图片的路径 */
+@property (nonatomic, copy) NSString *middle_image;
+/** 图片的宽度 */
+@property (nonatomic, assign) CGFloat width;
+/** 图片的高度 */
+@property (nonatomic, assign) CGFloat height;
+
+/** 帖子的类型 */
+@property (nonatomic, assign) SJTTopicType type;
+
+#pragma mark - 自己的额外辅助属性
+/** cell的高度 */
+@property (nonatomic, assign, readonly) CGFloat cellHeight;
+/** 图片控件的frame */
+@property (nonatomic, assign, readonly) CGRect pictureViewFrame;
+/** 图片是否太大 */
+@property (nonatomic, assign, getter=isBigPicture) BOOL bigPicture;
+
+/** 图片下载进度 */
+@property (nonatomic, assign) CGFloat pictureProgress;
 
 @end

@@ -7,8 +7,22 @@
 //  帖子
 
 #import "SJTTopic.h"
+//#import <MJExtension.h>
 
 @implementation SJTTopic
+{
+    // 自己声明成员变量，因为cellHeight你设置成readonly，防止外界更改，那么编译器就不会帮你生成set方法，那么成员变量也不会生成
+    CGFloat _cellHeight;
+    CGRect _pictureViewFrame;
+}
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{
+             @"samll_image" : @"image0",
+             @"large_image" : @"image1",
+             @"middle_image" : @"image2"
+             };
+}
 
 /*
  今年（MM-dd HH:mm:ss)
@@ -53,6 +67,45 @@
     } else {    // 不是今年
         return _created_at;
     }
+}
+
+- (CGFloat)cellHeight {
+    // 只计算一次高度，如果有值就不计算
+    if (!_cellHeight) {
+        // 文字的最大尺寸
+        CGSize maxSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 4 * SJTTopicCellMargin, MAXFLOAT);
+        CGFloat textH = [self.text boundingRectWithSize:maxSize options:(NSStringDrawingUsesLineFragmentOrigin) attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        
+        // cell的高度（文字部分
+        _cellHeight = SJTTopicCellTextY + textH + SJTTopicCellMargin;
+        
+        // 根据段子的类型来计算cell 的高度
+        if (self.type == SJTTopicPicture) {  // 图片
+            // 图片显示出来的宽度
+            CGFloat pictureW = maxSize.width;
+            // 图片显示出来的高度
+            CGFloat pictureH = pictureW * self.height / self.width;
+            
+            // 图片高度过长就限制高度
+            if (pictureH >= SJTTopicCellPictureMaxH) {
+                self.bigPicture = YES;
+                pictureH = SJTTopicCellPictureBreakH;
+            }
+            
+            // 计算图片控件的frame
+            CGFloat pictureX = SJTTopicCellMargin;
+            CGFloat pictureY = SJTTopicCellTextY + textH + SJTTopicCellMargin;
+            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+            
+            _cellHeight += pictureH + SJTTopicCellMargin;
+        } else if (self.type == SJTTopicVoice) {
+            
+        }
+        // 底部工具条高度
+        _cellHeight += SJTTopicCellBottomBarH + SJTTopicCellMargin;
+    }
+    
+    return _cellHeight;
 }
 
 @end

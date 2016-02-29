@@ -7,8 +7,20 @@
 //  推荐关注 左边的数据模型
 
 #import "SJTRecommendCategory.h"
+//#import <MJExtension.h>
 
 @implementation SJTRecommendCategory
+
++ (NSDictionary *)mj_replacedKeyFromPropertyName {
+    return @{@"ID" : @"id"};
+}
+
+//+ (NSString *)mj_replacedKeyFromPropertyName121:(NSString *)propertyName {
+//    if ([propertyName isEqualToString:@"ID"]) {
+//        return @"id";
+//    }
+//    return propertyName;
+//}
 
 - (NSMutableArray *)users {
     if (!_users) {

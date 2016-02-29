@@ -141,7 +141,7 @@ static NSString * const SJTUserID = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(c.id);
+    params[@"category_id"] = @(c.ID);
     params[@"page"] = @(c.currentPage);
     self.params = params;
     
@@ -193,7 +193,7 @@ static NSString * const SJTUserID = @"user";
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
-    params[@"category_id"] = @([SJTSelectedCategory id]);
+    params[@"category_id"] = @([SJTSelectedCategory ID]);
     // 因为加载cell的时候设置了页码，所以这里加载更多数据很方便
     params[@"page"] = @(++category.currentPage);
     self.params = params;

@@ -7,6 +7,7 @@
 //
 
 #import "SJTTabBar.h"
+#import "SJTPublishViewController.h"
 
 @interface SJTTabBar()
 /**
@@ -30,6 +31,7 @@
         UIButton *publishButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_icon"] forState:(UIControlStateNormal)];
         [publishButton setBackgroundImage:[UIImage imageNamed:@"tabBar_publish_click_icon"] forState:(UIControlStateHighlighted)];
+        [publishButton addTarget:self action:@selector(publishClick) forControlEvents:(UIControlEventTouchUpInside)];
         [self addSubview:publishButton];
         self.publishButton = publishButton;
     }
@@ -60,7 +62,12 @@
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         index++;
     }
+}
+
+- (void)publishClick {
+    SJTPublishViewController *publish = [[SJTPublishViewController alloc] init];
     
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:YES completion:nil];
 }
 
 @end

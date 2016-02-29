@@ -8,12 +8,9 @@
 
 #import "SJTEssenceViewController.h"
 #import "SJTRecommendTagsViewController.h"
-#import "SJTAllViewController.h"
-#import "SJTVideoViewController.h"
-#import "SJTVoiceViewController.h"
-#import "SJTPictureViewController.h"
-#import "SJTWordViewController.h"
 #import "SJTTItleButton.h"
+#import "SJTTopicViewController.h"
+#import "SJTShowPictureView.h"
 
 @interface SJTEssenceViewController () <UIScrollViewDelegate>
 
@@ -169,14 +166,24 @@
  *  初始化子控件
  */
 - (void)setupChildVces {
-    [self setupChildVc:[[SJTAllViewController alloc] init] title:@"全部"];
-    [self setupChildVc:[[SJTVideoViewController alloc] init] title:@"视频"];
-    [self setupChildVc:[[SJTVoiceViewController alloc] init] title:@"声音"];
-    [self setupChildVc:[[SJTPictureViewController alloc] init] title:@"图片"];
-    [self setupChildVc:[[SJTWordViewController alloc] init] title:@"段子"];
+    [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicAll title:@"全部"];
+    [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicVideo title:@"视频"];
+    [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicVoice title:@"声音"];
+    [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicPicture title:@"图片"];
+    [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicWord title:@"段子"];
+    
+    // 监听cell图片被点击事件
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageViewClick:) name:pictureNotificationName object:nil];
 }
 
-- (void)setupChildVc:(UIViewController *)vc title:(NSString *)title {
+- (void)imageViewClick:(NSNotification *)notification{
+    SJTShowPictureView *pictureBgView = [SJTShowPictureView showPictureView];
+    [pictureBgView image:notification.userInfo[@"clickImageView"] imageSuperView:notification.userInfo[@"view"] topicModel:notification.userInfo[@"topic"]];
+}
+
+- (void)setupChildVc:(SJTTopicViewController *)vc type:(SJTTopicType)type title:(NSString *)title {
+    // type 是枚举
+    vc.type = type;
     vc.title = title;
     [self addChildViewController:vc];
 }
