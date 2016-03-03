@@ -7,7 +7,8 @@
 //  新帖模块
 
 #import <UIKit/UIKit.h>
+#import "SJTEssenceViewController.h"
 
-@interface SJTNewViewController : UIViewController
+@interface SJTNewViewController : SJTEssenceViewController
 
 @end

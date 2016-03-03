@@ -26,4 +26,11 @@ NSString * const SJTUserSexMale = @"m";
 NSString * const SJTUserSexFemale = @"f";
 
 /** 精华-cell-最热评论标题的高度 */
-CGFloat const SJTTopicCellTopCmtTitleH = 20;
+CGFloat const SJTTopicCellTopCmtTitleH = 20;;
+
+/** tabBar被选中的通知名字 */
+UIKIT_EXTERN NSString * const SJTTabBarDidSelectNotification = @"SJTTabBarDidSelectNotification";
+/** tabBar被选中的通知 - 被点击的控制器的index key */
+UIKIT_EXTERN NSString * const SJTSelectedControllerIndexKey = @"SJTSelectedControllerIndexKey";
+/** tabBar被选中的通知 - 被点击的控制器的key */
+UIKIT_EXTERN NSString * const SJTSelectedControllerKey = @"SJTSelectedControllerKey";

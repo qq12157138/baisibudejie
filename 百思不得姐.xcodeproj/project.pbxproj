@@ -20,6 +20,12 @@
 		8E4BFBE41C85D0DA005DA2C0 /* SJTCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E4BFBE21C85D0DA005DA2C0 /* SJTCommentCell.xib */; };
 		8E4BFBEA1C860D06005DA2C0 /* SJTTopWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BFBE91C860D06005DA2C0 /* SJTTopWindow.m */; };
 		8E5E21D81C87E2A9000D43B2 /* UIImageView+SJTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21D71C87E2A9000D43B2 /* UIImageView+SJTExtension.m */; };
+		8E5E21DB1C880791000D43B2 /* SJTMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21DA1C880791000D43B2 /* SJTMeCell.m */; };
+		8E5E21DE1C880C3F000D43B2 /* SJTMeFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21DD1C880C3F000D43B2 /* SJTMeFooterView.m */; };
+		8E5E21E11C881052000D43B2 /* SJTSquare.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21E01C881052000D43B2 /* SJTSquare.m */; };
+		8E5E21E41C881459000D43B2 /* SJTSquareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21E31C881459000D43B2 /* SJTSquareButton.m */; };
+		8E5E21E81C882226000D43B2 /* SJTWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E5E21E61C882226000D43B2 /* SJTWebViewController.m */; };
+		8E5E21E91C882226000D43B2 /* SJTWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E5E21E71C882226000D43B2 /* SJTWebViewController.xib */; };
 		8E79440F1C7AEFA300AD9E75 /* SJTEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */; };
 		8E7944101C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E79439A1C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m */; };
 		8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E7943A01C7AEFA300AD9E75 /* SJTMeViewController.m */; };
@@ -95,6 +101,17 @@
 		8E4BFBE91C860D06005DA2C0 /* SJTTopWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopWindow.m; sourceTree = "<group>"; };
 		8E5E21D61C87E2A9000D43B2 /* UIImageView+SJTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SJTExtension.h"; sourceTree = "<group>"; };
 		8E5E21D71C87E2A9000D43B2 /* UIImageView+SJTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SJTExtension.m"; sourceTree = "<group>"; };
+		8E5E21D91C880791000D43B2 /* SJTMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTMeCell.h; sourceTree = "<group>"; };
+		8E5E21DA1C880791000D43B2 /* SJTMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTMeCell.m; sourceTree = "<group>"; };
+		8E5E21DC1C880C3F000D43B2 /* SJTMeFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTMeFooterView.h; sourceTree = "<group>"; };
+		8E5E21DD1C880C3F000D43B2 /* SJTMeFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTMeFooterView.m; sourceTree = "<group>"; };
+		8E5E21DF1C881052000D43B2 /* SJTSquare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTSquare.h; sourceTree = "<group>"; };
+		8E5E21E01C881052000D43B2 /* SJTSquare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTSquare.m; sourceTree = "<group>"; };
+		8E5E21E21C881459000D43B2 /* SJTSquareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTSquareButton.h; sourceTree = "<group>"; };
+		8E5E21E31C881459000D43B2 /* SJTSquareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTSquareButton.m; sourceTree = "<group>"; };
+		8E5E21E51C882226000D43B2 /* SJTWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTWebViewController.h; sourceTree = "<group>"; };
+		8E5E21E61C882226000D43B2 /* SJTWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTWebViewController.m; sourceTree = "<group>"; };
+		8E5E21E71C882226000D43B2 /* SJTWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTWebViewController.xib; sourceTree = "<group>"; };
 		8E7943931C7AEFA300AD9E75 /* SJTEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTEssenceViewController.h; sourceTree = "<group>"; };
 		8E7943941C7AEFA300AD9E75 /* SJTEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTEssenceViewController.m; sourceTree = "<group>"; };
 		8E7943991C7AEFA300AD9E75 /* SJTFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTFriendTrendsViewController.h; sourceTree = "<group>"; };
@@ -388,6 +405,9 @@
 			children = (
 				8E79439F1C7AEFA300AD9E75 /* SJTMeViewController.h */,
 				8E7943A01C7AEFA300AD9E75 /* SJTMeViewController.m */,
+				8E5E21E51C882226000D43B2 /* SJTWebViewController.h */,
+				8E5E21E61C882226000D43B2 /* SJTWebViewController.m */,
+				8E5E21E71C882226000D43B2 /* SJTWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -395,6 +415,8 @@
 		8E7943A11C7AEFA300AD9E75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E5E21DF1C881052000D43B2 /* SJTSquare.h */,
+				8E5E21E01C881052000D43B2 /* SJTSquare.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -402,6 +424,12 @@
 		8E7943A21C7AEFA300AD9E75 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8E5E21D91C880791000D43B2 /* SJTMeCell.h */,
+				8E5E21DA1C880791000D43B2 /* SJTMeCell.m */,
+				8E5E21DC1C880C3F000D43B2 /* SJTMeFooterView.h */,
+				8E5E21DD1C880C3F000D43B2 /* SJTMeFooterView.m */,
+				8E5E21E21C881459000D43B2 /* SJTSquareButton.h */,
+				8E5E21E31C881459000D43B2 /* SJTSquareButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -618,6 +646,7 @@
 				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
 				8E4BFBE41C85D0DA005DA2C0 /* SJTCommentCell.xib in Resources */,
 				8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */,
+				8E5E21E91C882226000D43B2 /* SJTWebViewController.xib in Resources */,
 				8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */,
 				8EA3FDC01C83EBD900069BA9 /* SJTPublishView.xib in Resources */,
 				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
@@ -688,8 +717,10 @@
 				8E5E21D81C87E2A9000D43B2 /* UIImageView+SJTExtension.m in Sources */,
 				8EA3FDBF1C83EBD900069BA9 /* SJTPublishView.m in Sources */,
 				8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */,
+				8E5E21DE1C880C3F000D43B2 /* SJTMeFooterView.m in Sources */,
 				8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */,
 				8EB2AC501C8489B30090620A /* SJTTopicVideoView.m in Sources */,
+				8E5E21E81C882226000D43B2 /* SJTWebViewController.m in Sources */,
 				8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */,
 				8E79443F1C7AEFA300AD9E75 /* main.m in Sources */,
 				8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */,
@@ -698,6 +729,7 @@
 				8EFBD3941C80B158000F5379 /* SJTPregressView.m in Sources */,
 				8E7944181C7AEFA300AD9E75 /* SJTTabBarController.m in Sources */,
 				8E4BFBD41C854878005DA2C0 /* SJTUser.m in Sources */,
+				8E5E21DB1C880791000D43B2 /* SJTMeCell.m in Sources */,
 				8E7944151C7AEFA300AD9E75 /* SJTTool.m in Sources */,
 				8E79444D1C7B536500AD9E75 /* SJTRecommendCategory.m in Sources */,
 				8E7944431C7AF9D300AD9E75 /* SJTNavigationController.m in Sources */,
@@ -721,12 +753,14 @@
 				8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */,
 				8E4BFBDB1C85628E005DA2C0 /* SJTCommentViewController.m in Sources */,
 				8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */,
+				8E5E21E41C881459000D43B2 /* SJTSquareButton.m in Sources */,
 				8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */,
 				8E7944491C7B49E500AD9E75 /* SJTRecommendViewController.m in Sources */,
 				8E7944131C7AEFA300AD9E75 /* AppDelegate.m in Sources */,
 				8E7944141C7AEFA300AD9E75 /* Foundation+Log.m in Sources */,
 				8E922F141C7DB3A5004CF9CE /* SJTPushGuideView.m in Sources */,
 				8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */,
+				8E5E21E11C881052000D43B2 /* SJTSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

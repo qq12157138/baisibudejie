@@ -17,6 +17,9 @@
 #import "SJTTool.h"
 #import "UIImageView+SJTExtension.h"
 
+// 通知中心
+#define SJTNoteCenter [NSNotificationCenter defaultCenter]
+
 #define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define SJTColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 

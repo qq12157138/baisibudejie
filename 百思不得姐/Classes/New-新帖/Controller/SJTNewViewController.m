@@ -17,9 +17,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 设置导航栏标题
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainTitle"]];
     
-    // 设置颜色
+    // 设置导航栏左边的按钮
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(tagClick) image:@"MainTagSubIcon" highImage:@"MainTagSubIconClick"];
+    
+    // 设置背景色
     self.view.backgroundColor = SJTGlobalBg;
+}
+
+- (void)tagClick{
+    SJTLogFunc;
 }
 
 

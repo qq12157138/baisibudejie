@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SJTMeViewController : UIViewController
+@interface SJTMeViewController : UITableViewController
+
 
 @end

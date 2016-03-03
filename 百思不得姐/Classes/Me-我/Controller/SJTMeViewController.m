@@ -7,16 +7,28 @@
 //
 
 #import "SJTMeViewController.h"
+#import "SJTMeCell.h"
+#import "SJTMeFooterView.h"
+#import <AFNetworking.h>
 
 @interface SJTMeViewController ()
 
 @end
+
+static NSString *MeID = @"cell";
 
 @implementation SJTMeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self setupNav];
+    
+    [self setupTableView];
+    
+}
+
+- (void)setupNav {
     // 设置导航栏标题
     self.navigationItem.title = @"我的";
     //    self.title = @"我的";
@@ -25,17 +37,53 @@
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithTarget:self action:@selector(settingClick) image:@"mine-setting-icon" highImage:@"mine-setting-icon-click"];
     UIBarButtonItem *nightModeItem = [UIBarButtonItem itemWithTarget:self action:@selector(nightModeClick) image:@"mine-moon-icon" highImage:@"mine-moon-icon-click"];
     self.navigationItem.rightBarButtonItems = @[settingItem, nightModeItem];
-    
+}
+
+- (void)setupTableView {
     // 设置颜色
-    self.view.backgroundColor = SJTGlobalBg;
+    self.tableView.backgroundColor = SJTGlobalBg;
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    // 注册Class
+    [self.tableView registerClass:[SJTMeCell class] forCellReuseIdentifier:MeID];
+    
+    self.tableView.sectionHeaderHeight = 0;
+    self.tableView.sectionFooterHeight = SJTTopicCellMargin;
+    
+    // 调整内边距
+    self.tableView.contentInset = UIEdgeInsetsMake(SJTTopicCellMargin - 35, 0, 0, 0);
+    
+    // 设置footerView
+    self.tableView.tableFooterView = [[SJTMeFooterView alloc] init];
 }
 
 - (void)settingClick {
-    
 }
 
 - (void)nightModeClick {
     SJTLog(@"nightModeClick");
+}
+
+#pragma mark - 数据源方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 1;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 2;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    SJTMeCell *cell = [tableView dequeueReusableCellWithIdentifier:MeID];
+    if (indexPath.section == 0) {
+        cell.imageView.image = [[UIImage imageNamed:@"defaultUserIcon"] sjt_circleImage];
+        cell.textLabel.text = @"登录/注册";
+    } else if(indexPath.section == 1){
+        cell.textLabel.text = @"离线下载";
+    }
+    
+    return cell;
 }
 
 @end

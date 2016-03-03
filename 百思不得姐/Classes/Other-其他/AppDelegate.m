@@ -12,7 +12,7 @@
 #import <SDWebImageManager.h>
 #import "SJTTopWindow.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UITabBarControllerDelegate>
 
 @end
 
@@ -24,6 +24,10 @@
     // 创建窗口
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
+    
+//    SJTTabBarController *tabBarController = [[SJTTabBarController alloc] init];
+//    tabBarController.delegate = self;
+    
     // 设置窗口的根控制器
     self.window.rootViewController = [[SJTTabBarController alloc] init];
     
@@ -43,10 +47,16 @@
     return YES;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
+#pragma mark - <UITabBarControllerDelegate>
+//- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController {
+////    NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+////    userInfo[SJTSelectedControllerKey] = viewController;
+////    userInfo[SJTSelectedControllerIndexKey] = @(tabBarController.selectedIndex);
+//    
+//    // 既然tabBarController.selectedIndex能拿到选中的索引，那么参数就没必要传了，在控制器中可以拿到自己的tabBarController
+//    // 发通知
+//    [SJTNoteCenter postNotificationName:SJTTabBarDidSelectNotification object:nil userInfo:nil];
+//}
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
     #warning 用了SDWebImage框架需要处理内存

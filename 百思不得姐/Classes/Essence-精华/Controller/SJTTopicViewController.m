@@ -16,6 +16,7 @@
 #import "SJTTopicCell.h"
 #import "SJTShowPictureView.h"
 #import "SJTCommentViewController.h"
+#import "SJTNewViewController.h"
 
 @interface SJTTopicViewController ()
 
@@ -30,6 +31,9 @@
 
 /** 上一次的请求参数 */
 @property (nonatomic, strong) NSDictionary *params;
+
+/** 上次选中的索引（或者控制器） */
+@property (nonatomic, assign) NSInteger lastSelectedIndex;
 
 @end
 
@@ -76,12 +80,33 @@ static NSString * const SJTTopicCellId = @"topic";
     // 注册nib
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([SJTTopicCell class]) bundle:nil] forCellReuseIdentifier:SJTTopicCellId];
     
+    // 监听tabBar发出的通知
+    [SJTNoteCenter addObserver:self selector:@selector(tabBarSelect) name:SJTTabBarDidSelectNotification object:nil];
 }
 
+- (void)tabBarSelect {
+    
+    // 如果是连续选中2次 并且 如果选中的是当前控制器
+    if (self.lastSelectedIndex == self.tabBarController.selectedIndex
+//        && self.tabBarController.selectedViewController == self.navigationController
+        && self.view.isShowingOnKeyWindow) {
+        [self.tableView.mj_header beginRefreshing];
+    }
+    
+    // 记录这一次选中的索引
+    self.lastSelectedIndex = self.tabBarController.selectedIndex;
+    
+}
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
+
+#pragma mark - a参数
+- (NSString *)a {
+    return [self.parentViewController isKindOfClass:[SJTNewViewController class]] ? @"newlist" : @"list";
+}
+
 #pragma mark - 数据处理
 /**
  *  加载新的帖子数据
@@ -92,7 +117,7 @@ static NSString * const SJTTopicCellId = @"topic";
     
     // 发送请求
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     self.params = params;
@@ -133,7 +158,7 @@ static NSString * const SJTTopicCellId = @"topic";
     
     // 发送请求
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
+    params[@"a"] = self.a;
     params[@"c"] = @"data";
     params[@"type"] = @(self.type);
     params[@"page"] = @(self.page);
