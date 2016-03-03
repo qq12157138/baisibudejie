@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10089" systemVersion="15E39d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SJTPublishView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dad-sl-2iH">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lUu-uj-pMb">
+                    <rect key="frame" x="156" y="550" width="289" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="289" id="4xk-L7-Rka"/>
+                        <constraint firstAttribute="height" constant="40" id="upW-eR-S1t"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="shareButtonCancel"/>
+                    <state key="highlighted" backgroundImage="shareButtonCancelClick"/>
+                    <connections>
+                        <action selector="close" destination="iN0-l3-epB" eventType="touchUpInside" id="eIl-z9-btP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="lUu-uj-pMb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="JRp-WH-lJZ"/>
+                <constraint firstAttribute="bottom" secondItem="dad-sl-2iH" secondAttribute="bottom" id="Ysj-6d-Ndo"/>
+                <constraint firstItem="dad-sl-2iH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dYR-i4-mG0"/>
+                <constraint firstAttribute="bottom" secondItem="lUu-uj-pMb" secondAttribute="bottom" constant="10" id="h0T-wf-FIw"/>
+                <constraint firstItem="dad-sl-2iH" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="swJ-G5-l7s"/>
+                <constraint firstAttribute="trailing" secondItem="dad-sl-2iH" secondAttribute="trailing" id="uHr-cD-SSc"/>
+            </constraints>
+            <connections>
+                <outlet property="bgView" destination="dad-sl-2iH" id="GhO-y1-ZYr"/>
+            </connections>
+            <point key="canvasLocation" x="150" y="303"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ch-D8-zGV">
+            <rect key="frame" x="0.0" y="0.0" width="289" height="40"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="289" id="B99-pA-eFv"/>
+                <constraint firstAttribute="height" constant="40" id="ig8-A6-0mT"/>
+            </constraints>
+            <state key="normal" backgroundImage="shareButtonCancel"/>
+            <state key="highlighted" backgroundImage="shareButtonCancelClick"/>
+            <point key="canvasLocation" x="679.5" y="303"/>
+        </button>
+    </objects>
+    <resources>
+        <image name="shareButtonCancel" width="289" height="40"/>
+        <image name="shareButtonCancelClick" width="289" height="40"/>
+    </resources>
+</document>

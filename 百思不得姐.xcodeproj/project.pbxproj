@@ -53,8 +53,6 @@
 		8E922F161C7DB3B6004CF9CE /* SJTPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */; };
 		8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */; };
 		8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */; };
-		8EA3FDBF1C83EBD900069BA9 /* SJTPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EA3FDBD1C83EBD900069BA9 /* SJTPublishView.m */; };
-		8EA3FDC01C83EBD900069BA9 /* SJTPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EA3FDBE1C83EBD900069BA9 /* SJTPublishView.xib */; };
 		8EB2AC4B1C847E4B0090620A /* SJTTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4A1C847E4B0090620A /* SJTTopicVoiceView.m */; };
 		8EB2AC4D1C847E580090620A /* SJTTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4C1C847E580090620A /* SJTTopicVoiceView.xib */; };
 		8EB2AC501C8489B30090620A /* SJTTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4F1C8489B30090620A /* SJTTopicVideoView.m */; };
@@ -62,6 +60,12 @@
 		8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C5E1C7F022C001C6817 /* SJTTItleButton.m */; };
 		8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C611C7F3666001C6817 /* SJTTopic.m */; };
 		8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C641C7F4A38001C6817 /* SJTConst.m */; };
+		8ED2EFA81C88372B00EEBC27 /* SJTPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFA61C88372B00EEBC27 /* SJTPublishView.m */; };
+		8ED2EFA91C88372B00EEBC27 /* SJTPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2EFA71C88372B00EEBC27 /* SJTPublishView.xib */; };
+		8ED2EFAC1C88380B00EEBC27 /* SJTPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFAB1C88380B00EEBC27 /* SJTPostWordViewController.m */; };
+		8ED2EFAF1C8854AF00EEBC27 /* SJTPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFAE1C8854AF00EEBC27 /* SJTPlaceholderTextView.m */; };
+		8ED2EFB21C887A5600EEBC27 /* SJTAddTagToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFB11C887A5600EEBC27 /* SJTAddTagToolbar.m */; };
+		8ED2EFB41C887A7100EEBC27 /* SJTAddTagToolbar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2EFB31C887A7100EEBC27 /* SJTAddTagToolbar.xib */; };
 		8EE90CD41C7C5D600044BCB8 /* SJTRecommendTagsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */; };
 		8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD61C7C65610044BCB8 /* SJTRecommendTag.m */; };
 		8EE90CDB1C7C66A70044BCB8 /* SJTRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE90CD91C7C66A70044BCB8 /* SJTRecommendTagCell.m */; };
@@ -159,9 +163,6 @@
 		8E9567251C7FF3BD00C3B908 /* SJTTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicCell.h; sourceTree = "<group>"; };
 		8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicCell.m; sourceTree = "<group>"; };
 		8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTTopicCell.xib; sourceTree = "<group>"; };
-		8EA3FDBC1C83EBD900069BA9 /* SJTPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPublishView.h; sourceTree = "<group>"; };
-		8EA3FDBD1C83EBD900069BA9 /* SJTPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPublishView.m; sourceTree = "<group>"; };
-		8EA3FDBE1C83EBD900069BA9 /* SJTPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTPublishView.xib; sourceTree = "<group>"; };
 		8EB2AC491C847E4B0090620A /* SJTTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicVoiceView.h; sourceTree = "<group>"; };
 		8EB2AC4A1C847E4B0090620A /* SJTTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicVoiceView.m; sourceTree = "<group>"; };
 		8EB2AC4C1C847E580090620A /* SJTTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -174,6 +175,16 @@
 		8EBF0C611C7F3666001C6817 /* SJTTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopic.m; sourceTree = "<group>"; };
 		8EBF0C631C7F4A38001C6817 /* SJTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTConst.h; sourceTree = "<group>"; };
 		8EBF0C641C7F4A38001C6817 /* SJTConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTConst.m; sourceTree = "<group>"; };
+		8ED2EFA51C88372B00EEBC27 /* SJTPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPublishView.h; sourceTree = "<group>"; };
+		8ED2EFA61C88372B00EEBC27 /* SJTPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPublishView.m; sourceTree = "<group>"; };
+		8ED2EFA71C88372B00EEBC27 /* SJTPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTPublishView.xib; sourceTree = "<group>"; };
+		8ED2EFAA1C88380B00EEBC27 /* SJTPostWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPostWordViewController.h; sourceTree = "<group>"; };
+		8ED2EFAB1C88380B00EEBC27 /* SJTPostWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPostWordViewController.m; sourceTree = "<group>"; };
+		8ED2EFAD1C8854AF00EEBC27 /* SJTPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPlaceholderTextView.h; sourceTree = "<group>"; };
+		8ED2EFAE1C8854AF00EEBC27 /* SJTPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPlaceholderTextView.m; sourceTree = "<group>"; };
+		8ED2EFB01C887A5600EEBC27 /* SJTAddTagToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTAddTagToolbar.h; sourceTree = "<group>"; };
+		8ED2EFB11C887A5600EEBC27 /* SJTAddTagToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTAddTagToolbar.m; sourceTree = "<group>"; };
+		8ED2EFB31C887A7100EEBC27 /* SJTAddTagToolbar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTAddTagToolbar.xib; sourceTree = "<group>"; };
 		8EE90CD21C7C5D600044BCB8 /* SJTRecommendTagsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTagsViewController.h; sourceTree = "<group>"; };
 		8EE90CD31C7C5D600044BCB8 /* SJTRecommendTagsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTRecommendTagsViewController.m; sourceTree = "<group>"; };
 		8EE90CD51C7C65610044BCB8 /* SJTRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTRecommendTag.h; sourceTree = "<group>"; };
@@ -258,6 +269,7 @@
 		8E7943901C7AEFA300AD9E75 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				8ED2EFA11C88372B00EEBC27 /* Publish-发布 */,
 				8E922F031C7DA1FA004CF9CE /* Login-登录 */,
 				8E7943911C7AEFA300AD9E75 /* Essence-精华 */,
 				8E7943A31C7AEFA300AD9E75 /* New-新帖 */,
@@ -520,9 +532,6 @@
 				8E922F121C7DB3A5004CF9CE /* SJTPushGuideView.h */,
 				8E922F131C7DB3A5004CF9CE /* SJTPushGuideView.m */,
 				8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */,
-				8EA3FDBC1C83EBD900069BA9 /* SJTPublishView.h */,
-				8EA3FDBD1C83EBD900069BA9 /* SJTPublishView.m */,
-				8EA3FDBE1C83EBD900069BA9 /* SJTPublishView.xib */,
 				8E4BFBE81C860D06005DA2C0 /* SJTTopWindow.h */,
 				8E4BFBE91C860D06005DA2C0 /* SJTTopWindow.m */,
 			);
@@ -563,6 +572,47 @@
 				8E922F0B1C7DA1FA004CF9CE /* SJTTextField.m */,
 				8E922F0C1C7DA1FA004CF9CE /* SJTVerticalButton.h */,
 				8E922F0D1C7DA1FA004CF9CE /* SJTVerticalButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8ED2EFA11C88372B00EEBC27 /* Publish-发布 */ = {
+			isa = PBXGroup;
+			children = (
+				8ED2EFA21C88372B00EEBC27 /* Controller */,
+				8ED2EFA31C88372B00EEBC27 /* Model */,
+				8ED2EFA41C88372B00EEBC27 /* View */,
+			);
+			path = "Publish-发布";
+			sourceTree = "<group>";
+		};
+		8ED2EFA21C88372B00EEBC27 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8ED2EFAA1C88380B00EEBC27 /* SJTPostWordViewController.h */,
+				8ED2EFAB1C88380B00EEBC27 /* SJTPostWordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8ED2EFA31C88372B00EEBC27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8ED2EFA41C88372B00EEBC27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8ED2EFA51C88372B00EEBC27 /* SJTPublishView.h */,
+				8ED2EFA61C88372B00EEBC27 /* SJTPublishView.m */,
+				8ED2EFA71C88372B00EEBC27 /* SJTPublishView.xib */,
+				8ED2EFAD1C8854AF00EEBC27 /* SJTPlaceholderTextView.h */,
+				8ED2EFAE1C8854AF00EEBC27 /* SJTPlaceholderTextView.m */,
+				8ED2EFB01C887A5600EEBC27 /* SJTAddTagToolbar.h */,
+				8ED2EFB11C887A5600EEBC27 /* SJTAddTagToolbar.m */,
+				8ED2EFB31C887A7100EEBC27 /* SJTAddTagToolbar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -643,12 +693,13 @@
 				8EFBD3891C805765000F5379 /* SJTTopicPictureView.xib in Resources */,
 				8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */,
 				8E7944451C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib in Resources */,
+				8ED2EFB41C887A7100EEBC27 /* SJTAddTagToolbar.xib in Resources */,
 				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
 				8E4BFBE41C85D0DA005DA2C0 /* SJTCommentCell.xib in Resources */,
 				8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */,
 				8E5E21E91C882226000D43B2 /* SJTWebViewController.xib in Resources */,
 				8EF523301C7BFFF100AE987E /* SJTRecommendUserCell.xib in Resources */,
-				8EA3FDC01C83EBD900069BA9 /* SJTPublishView.xib in Resources */,
+				8ED2EFA91C88372B00EEBC27 /* SJTPublishView.xib in Resources */,
 				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
 				8EB2AC521C8489BF0090620A /* SJTTopicVideoView.xib in Resources */,
 				8EB2AC4D1C847E580090620A /* SJTTopicVoiceView.xib in Resources */,
@@ -715,13 +766,13 @@
 				8E1DC32F1C815A62006F51A9 /* SJTShowPictureView.m in Sources */,
 				8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */,
 				8E5E21D81C87E2A9000D43B2 /* UIImageView+SJTExtension.m in Sources */,
-				8EA3FDBF1C83EBD900069BA9 /* SJTPublishView.m in Sources */,
 				8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */,
 				8E5E21DE1C880C3F000D43B2 /* SJTMeFooterView.m in Sources */,
 				8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */,
 				8EB2AC501C8489B30090620A /* SJTTopicVideoView.m in Sources */,
 				8E5E21E81C882226000D43B2 /* SJTWebViewController.m in Sources */,
 				8E7944171C7AEFA300AD9E75 /* UIView+Extension.m in Sources */,
+				8ED2EFAF1C8854AF00EEBC27 /* SJTPlaceholderTextView.m in Sources */,
 				8E79443F1C7AEFA300AD9E75 /* main.m in Sources */,
 				8E7944111C7AEFA300AD9E75 /* SJTMeViewController.m in Sources */,
 				8E7944101C7AEFA300AD9E75 /* SJTFriendTrendsViewController.m in Sources */,
@@ -736,10 +787,13 @@
 				8E4BFBE31C85D0DA005DA2C0 /* SJTCommentCell.m in Sources */,
 				8E79440F1C7AEFA300AD9E75 /* SJTEssenceViewController.m in Sources */,
 				8E4BFBDF1C859D46005DA2C0 /* SJTCommentHeaderView.m in Sources */,
+				8ED2EFA81C88372B00EEBC27 /* SJTPublishView.m in Sources */,
+				8ED2EFAC1C88380B00EEBC27 /* SJTPostWordViewController.m in Sources */,
 				8EB2AC4B1C847E4B0090620A /* SJTTopicVoiceView.m in Sources */,
 				8EF523331C7C03B500AE987E /* SJTRecommendUser.m in Sources */,
 				8E7944161C7AEFA300AD9E75 /* UIBarButtonItem+Extension.m in Sources */,
 				8EFBD3841C803171000F5379 /* SJTTopicViewController.m in Sources */,
+				8ED2EFB21C887A5600EEBC27 /* SJTAddTagToolbar.m in Sources */,
 				8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */,
 				8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */,
 				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,

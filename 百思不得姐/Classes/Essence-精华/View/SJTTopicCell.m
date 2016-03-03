@@ -56,7 +56,7 @@
     if (!_pictureView) {
         // 因为是weak弱指针，所以不能直接赋值，所以一开始就加进去就行
 //        self.pictureView = [SJTTopicPictureView pictureView];
-        SJTTopicPictureView *pictureView = [SJTTopicPictureView pictureView];
+        SJTTopicPictureView *pictureView = [SJTTopicPictureView viewFromXib];
         [self.contentView addSubview:pictureView];
         _pictureView = pictureView;
     }
@@ -65,7 +65,7 @@
 // 懒加载
 - (SJTTopicVoiceView *)voiceView {
     if (!_voiceView) {
-        SJTTopicVoiceView *voiceView = [SJTTopicVoiceView voiceView];
+        SJTTopicVoiceView *voiceView = [SJTTopicVoiceView viewFromXib];
         [self.contentView addSubview:voiceView];
         _voiceView = voiceView;
     }
@@ -74,16 +74,11 @@
 // 懒加载
 - (SJTTopicVideoView *)videoView {
     if (!_videoView) {
-        SJTTopicVideoView *videoView = [SJTTopicVideoView videoView];
+        SJTTopicVideoView *videoView = [SJTTopicVideoView viewFromXib];
         [self.contentView addSubview:videoView];
         _videoView = videoView;
     }
     return _videoView;
-}
-
-+ (instancetype)cell {
-    // 加载xib
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
 }
 
 - (void)awakeFromNib {

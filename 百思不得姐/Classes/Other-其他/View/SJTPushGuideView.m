@@ -10,10 +10,6 @@
 
 @implementation SJTPushGuideView
 
-+ (instancetype)guideView {
-    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
-}
-
 - (IBAction)close:(id)sender {
     // 从窗口删除
     [self removeFromSuperview];

@@ -10,6 +10,4 @@
 
 @interface SJTPushGuideView : UIView
 
-+ (instancetype)guideView;
-
 @end

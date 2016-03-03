@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10089" systemVersion="15E56a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10072.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="SpS-0K-eg3" customClass="SJTShowPictureView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VbT-uo-KGZ">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </scrollView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e5P-Kf-HDz" userLabel="进度条控件" customClass="SJTPregressView">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="CBo-Vq-m8G"/>
+                        <constraint firstAttribute="height" constant="100" id="wsE-T9-aXl"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="VbT-uo-KGZ" firstAttribute="leading" secondItem="SpS-0K-eg3" secondAttribute="leading" id="9W2-P8-bZ8"/>
+                <constraint firstItem="e5P-Kf-HDz" firstAttribute="centerY" secondItem="SpS-0K-eg3" secondAttribute="centerY" id="9hX-hq-oe8"/>
+                <constraint firstItem="e5P-Kf-HDz" firstAttribute="centerX" secondItem="SpS-0K-eg3" secondAttribute="centerX" id="LJz-B2-mVS"/>
+                <constraint firstAttribute="bottom" secondItem="VbT-uo-KGZ" secondAttribute="bottom" id="M60-bZ-DLw"/>
+                <constraint firstAttribute="trailing" secondItem="VbT-uo-KGZ" secondAttribute="trailing" id="vDt-pn-ydE"/>
+                <constraint firstItem="VbT-uo-KGZ" firstAttribute="top" secondItem="SpS-0K-eg3" secondAttribute="top" id="xRl-qu-ZPP"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="progressView" destination="e5P-Kf-HDz" id="Ohj-cU-WFv"/>
+                <outlet property="scrollView" destination="VbT-uo-KGZ" id="1Oi-tO-Ybl"/>
+            </connections>
+            <point key="canvasLocation" x="14" y="166"/>
+        </view>
+    </objects>
+</document>

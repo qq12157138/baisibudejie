@@ -55,6 +55,7 @@ static NSString *MeID = @"cell";
     
     // 设置footerView
     self.tableView.tableFooterView = [[SJTMeFooterView alloc] init];
+    
 }
 
 - (void)settingClick {
@@ -83,7 +84,9 @@ static NSString *MeID = @"cell";
         cell.textLabel.text = @"离线下载";
     }
     
+    
     return cell;
 }
+
 
 @end

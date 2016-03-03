@@ -38,7 +38,7 @@
     
     // 显示推送指南
     [SJTTool sjt_isNewVsersion:^{
-        SJTPushGuideView *guideView = [SJTPushGuideView guideView];
+        SJTPushGuideView *guideView = [SJTPushGuideView viewFromXib];
         guideView.frame = self.window.bounds;
         [self.window addSubview:guideView];
     } oldVersion:nil];
