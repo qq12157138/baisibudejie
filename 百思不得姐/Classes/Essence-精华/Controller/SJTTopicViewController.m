@@ -15,6 +15,7 @@
 #import <MJRefresh.h>
 #import "SJTTopicCell.h"
 #import "SJTShowPictureView.h"
+#import "SJTCommentViewController.h"
 
 @interface SJTTopicViewController ()
 
@@ -188,4 +189,9 @@ static NSString * const SJTTopicCellId = @"topic";
     return topic.cellHeight;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    SJTCommentViewController *commentVc = [[SJTCommentViewController alloc] init];
+    commentVc.topic = self.topics[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
+}
 @end

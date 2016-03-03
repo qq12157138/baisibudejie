@@ -14,7 +14,10 @@
 #import "NSDate+SJTExtension.h"
 #import "UIView+Extension.h"
 #import "UIBarButtonItem+Extension.h"
+#import "SJTTool.h"
+#import "UIImageView+SJTExtension.h"
 
+#define iOS8 ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
 #define SJTColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 #define SJTRandomColor SJTColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
@@ -31,6 +34,7 @@
 
 #define SJTScreenW [UIScreen mainScreen].bounds.size.width
 #define SJTScreenH [UIScreen mainScreen].bounds.size.height
+#define SJTWindow [UIApplication sharedApplication].keyWindow
 
 #define pictureNotificationName @"pictureNotificationName"
 

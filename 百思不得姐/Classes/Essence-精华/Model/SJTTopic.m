@@ -7,21 +7,30 @@
 //  帖子
 
 #import "SJTTopic.h"
-//#import <MJExtension.h>
+#import <MJExtension.h>
+#import "SJTUser.h"
+#import "SJTComment.h"
 
 @implementation SJTTopic
 {
     // 自己声明成员变量，因为cellHeight你设置成readonly，防止外界更改，那么编译器就不会帮你生成set方法，那么成员变量也不会生成
     CGFloat _cellHeight;
-    CGRect _pictureViewFrame;
 }
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     return @{
              @"samll_image" : @"image0",
              @"large_image" : @"image1",
-             @"middle_image" : @"image2"
+             @"middle_image" : @"image2",
+             @"ID" : @"id",
+             @"top_cmt" : @"top_cmt[0]",
+             @"qzone_uid" : @"top_cmt[0].user.qzone_uid"
              };
+}
+// 指定该属性的类型，并不对该类进行依赖
++ (NSDictionary *)mj_objectClassInArray {
+//    return @{@"top_cmt" : [SJTComment class]};
+        return @{@"top_cmt" : @"SJTComment"};
 }
 
 /*
@@ -80,7 +89,7 @@
         _cellHeight = SJTTopicCellTextY + textH + SJTTopicCellMargin;
         
         // 根据段子的类型来计算cell 的高度
-        if (self.type == SJTTopicPicture) {  // 图片
+        if (self.type == SJTTopicPicture) {  // 图片帖子
             // 图片显示出来的宽度
             CGFloat pictureW = maxSize.width;
             // 图片显示出来的高度
@@ -98,14 +107,45 @@
             _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
             
             _cellHeight += pictureH + SJTTopicCellMargin;
-        } else if (self.type == SJTTopicVoice) {
+        } else if (self.type == SJTTopicVoice) {    // 声音帖子
+            CGFloat voiceX = SJTTopicCellMargin;
+            CGFloat voiceY = SJTTopicCellTextY + textH + SJTTopicCellMargin;
+            CGFloat voiceW = maxSize.width;
+            CGFloat voiceH = voiceW * self.height / self.width;
+            _voiceFrame = CGRectMake(voiceX, voiceY, voiceW, voiceH);
             
+            _cellHeight += voiceH + SJTTopicCellMargin;
+        } else if (self.type == SJTTopicVideo) { // 视频帖子
+            CGFloat videoX = SJTTopicCellMargin;
+            CGFloat videoY = SJTTopicCellTextY + textH + SJTTopicCellMargin;
+            CGFloat videoW = maxSize.width;
+            CGFloat videoH = videoW * self.height / self.width;
+            _videoFrame = CGRectMake(videoX, videoY, videoW, videoH);
+            
+            _cellHeight += videoH + SJTTopicCellMargin;
         }
+        
+        // 如果有最热评论
+//        SJTComment *cmt = [self.top_cmt firstObject];
+//        if (cmt) {
+//            NSString *content = [NSString stringWithFormat:@"%@ : %@", cmt.user.username, cmt.content];
+//            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+//            _cellHeight += SJTTopicCellTopCmtTitleH + contentH + SJTTopicCellMargin;
+//        }
+        if (self.top_cmt) {
+            NSString *content = [NSString stringWithFormat:@"%@ : %@", self.top_cmt.user.username, self.top_cmt.content];
+            CGFloat contentH = [content boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:13]} context:nil].size.height;
+            _cellHeight += SJTTopicCellTopCmtTitleH + contentH + SJTTopicCellMargin;
+        }
+        
+        
         // 底部工具条高度
         _cellHeight += SJTTopicCellBottomBarH + SJTTopicCellMargin;
     }
     
     return _cellHeight;
 }
+
+
 
 @end

@@ -171,14 +171,6 @@
     [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicVoice title:@"声音"];
     [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicPicture title:@"图片"];
     [self setupChildVc:[[SJTTopicViewController alloc] init] type:SJTTopicWord title:@"段子"];
-    
-    // 监听cell图片被点击事件
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(imageViewClick:) name:pictureNotificationName object:nil];
-}
-
-- (void)imageViewClick:(NSNotification *)notification{
-    SJTShowPictureView *pictureBgView = [SJTShowPictureView showPictureView];
-    [pictureBgView image:notification.userInfo[@"clickImageView"] imageSuperView:notification.userInfo[@"view"] topicModel:notification.userInfo[@"topic"]];
 }
 
 - (void)setupChildVc:(SJTTopicViewController *)vc type:(SJTTopicType)type title:(NSString *)title {

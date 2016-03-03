@@ -19,9 +19,7 @@
 @end
 
 @implementation SJTTabBarController
-
-+ (void)initialize
-{
++ (void)initialize {
     NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
     attrs[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     attrs[NSForegroundColorAttributeName] = [UIColor grayColor];

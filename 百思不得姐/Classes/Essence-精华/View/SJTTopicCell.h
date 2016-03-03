@@ -13,4 +13,6 @@
 /** 帖子数据 */
 @property (nonatomic, strong) SJTTopic *topic;
 
++ (instancetype)cell;
+
 @end

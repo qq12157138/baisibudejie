@@ -237,6 +237,42 @@
     }
 }
 
+/**
+ 模糊效果
+ 
+ @param frame 多大
+ @param alpha 模糊度
+ 
+ @return 返回UIVisualEffectView可以添加到控制器中
+ */
++ (UIVisualEffectView *)sjt_bgBluEffectWithFrame:(CGRect)frame alpha:(CGFloat)alpha{
+    // 1、创建模糊效果
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
+    // 2、把模糊效果添加到容器里
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurView.frame = frame;
+    if (alpha) {
+        blurView.alpha = alpha;
+    }
+    return blurView;
+}
+
+/**
+ 模糊效果
+ 
+ @param frame 多大
+ 
+ @return 返回UIVisualEffectView可以添加到控制器中
+ */
++ (UIVisualEffectView *)sjt_bgBluEffectWithFrame:(CGRect)frame{
+    // 1、创建模糊效果
+    UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:(UIBlurEffectStyleLight)];
+    // 2、把模糊效果添加到容器里
+    UIVisualEffectView *blurView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+    blurView.frame = frame;
+    return blurView;
+}
+
 @end
 
 @implementation UIImage (SJT)
@@ -248,7 +284,23 @@
  - parameter border:      图片边框宽度
  - parameter borderColor: 图片边框颜色
  */
+- (UIImage *)sjt_circleImage {
+//    self.imageView.layer.cornerRadius = self.imageView.width * 0.5;
+//    self.imageView.layer.masksToBounds = YES;
+    return [UIImage sjt_imageWithRoundImage:self border:0 borderColor:nil];
+}
+
+/**
+ 圆形头像
+ 
+ - parameter image:       图片
+ - parameter border:      图片边框宽度
+ - parameter borderColor: 图片边框颜色
+ */
 + (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor {
+    if (border) {
+        border = 0;
+    }
     // 圆环的宽度
     CGFloat borderW = border;
     
@@ -261,7 +313,7 @@
     // 设置新的图片尺寸（防止图片是长方形）
     CGFloat circirW = imageW > imageH ? imageH : imageW;
     
-    // 开启上下文
+    // 开启（NO代表透明）上下文
     UIGraphicsBeginImageContextWithOptions(CGSizeMake(circirW, circirW), NO, 0.0);
     
     // 画大圆
@@ -271,8 +323,10 @@
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextAddPath(ctx, path.CGPath);
     
-    // 设置颜色
-    [borderColor set];
+    if (borderColor) {
+        // 设置颜色
+        [borderColor set];
+    }
     
     // 渲染
     CGContextFillPath(ctx);

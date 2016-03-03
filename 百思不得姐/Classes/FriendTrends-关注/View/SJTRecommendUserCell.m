@@ -21,13 +21,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
 }
 
 - (void)setUser:(SJTRecommendUser *)user {
@@ -41,7 +38,9 @@
         fansCount = [NSString stringWithFormat:@"%.1f万人关注", user.fans_count / 10000.0];
     }
     self.fansCountLabel.text = fansCount;
-    [self.headerImageView sd_setImageWithURL:[NSURL URLWithString:user.header] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    
+    // 设置头像
+    [self.headerImageView setHeader:user.header];
 }
 
 @end

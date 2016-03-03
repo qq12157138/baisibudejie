@@ -61,6 +61,15 @@
  */
 + (void)sjt_getUrlValueWithHttpHead:(NSString *)httpHead url:(NSString *)url block:(void (^)(NSString *selector, NSDictionary *dict))block;
 
+/**
+ 模糊效果
+ */
++ (UIVisualEffectView *)sjt_bgBluEffectWithFrame:(CGRect)frame alpha:(CGFloat)alpha;
+/**
+ 模糊效果
+ */
++ (UIVisualEffectView *)sjt_bgBluEffectWithFrame:(CGRect)frame;
+
 @end
 
 @interface UIImage (SJT)
@@ -72,7 +81,11 @@
 /**
  圆形头像
  */
-+ (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor ;
++ (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor;
+/**
+ 圆形头像
+ */
+- (UIImage *)sjt_circleImage;
 
 /**
  截屏

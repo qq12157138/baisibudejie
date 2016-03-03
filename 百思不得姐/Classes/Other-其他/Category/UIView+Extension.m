@@ -88,5 +88,18 @@
     return self.frame.origin;
 }
 
+- (BOOL)isShowingOnKeyWindow {
+    // 主窗口
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    
+    // 转换坐标系（得到subview在主窗口中的frame）
+    // CGRect newFrame = [self.superview convertRect:self.frame toView:nil];
+    CGRect newFrame = [keyWindow convertRect:self.frame fromView:self.superview];
+    CGRect winBounds = keyWindow.bounds;
+    
+    BOOL intersects = CGRectIntersectsRect(newFrame, winBounds);
+    
+    return self.window == keyWindow && !self.isHidden && self.alpha > 0.01 && intersects;
+}
 
 @end

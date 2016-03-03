@@ -7,7 +7,7 @@
 //
 
 #import "SJTTabBar.h"
-#import "SJTPublishViewController.h"
+#import "SJTPublishView.h"
 
 @interface SJTTabBar()
 /**
@@ -64,10 +64,9 @@
     }
 }
 
+UIWindow *window;
 - (void)publishClick {
-    SJTPublishViewController *publish = [[SJTPublishViewController alloc] init];
-    
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:publish animated:YES completion:nil];
+    [SJTPublishView show];
 }
 
 @end

@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 #import "SJTTabBarController.h"
 #import "SJTPushGuideView.h"
-#import "SJTTool.h"
 #import <SDWebImageManager.h>
+#import "SJTTopWindow.h"
 
 @interface AppDelegate ()
 
@@ -30,6 +30,8 @@
     // 显示窗口
     [self.window makeKeyAndVisible];
     
+    [SJTTopWindow show];
+    
     // 显示推送指南
     [SJTTool sjt_isNewVsersion:^{
         SJTPushGuideView *guideView = [SJTPushGuideView guideView];
@@ -37,7 +39,13 @@
         [self.window addSubview:guideView];
     } oldVersion:nil];
     
+    
     return YES;
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application {
@@ -61,14 +69,17 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
 }
 
 @end

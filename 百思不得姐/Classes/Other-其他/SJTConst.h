@@ -32,3 +32,10 @@ UIKIT_EXTERN CGFloat const SJTTopicCellBottomBarH;
 UIKIT_EXTERN CGFloat const SJTTopicCellPictureMaxH;
 /** 精华-cell-图片帖子超过最大高度的固定高度 */
 UIKIT_EXTERN CGFloat const SJTTopicCellPictureBreakH;
+
+/** SJTUser模型-性别属性值 */
+UIKIT_EXTERN NSString * const SJTUserSexMale;
+UIKIT_EXTERN NSString * const SJTUserSexFemale;
+
+/** 精华-cell-最热评论标题的高度 */
+UIKIT_EXTERN CGFloat const SJTTopicCellTopCmtTitleH;
