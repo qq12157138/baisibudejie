@@ -29,8 +29,14 @@ NSString * const SJTUserSexFemale = @"f";
 CGFloat const SJTTopicCellTopCmtTitleH = 20;;
 
 /** tabBar被选中的通知名字 */
-UIKIT_EXTERN NSString * const SJTTabBarDidSelectNotification = @"SJTTabBarDidSelectNotification";
+NSString * const SJTTabBarDidSelectNotification = @"SJTTabBarDidSelectNotification";
 /** tabBar被选中的通知 - 被点击的控制器的index key */
-UIKIT_EXTERN NSString * const SJTSelectedControllerIndexKey = @"SJTSelectedControllerIndexKey";
+NSString * const SJTSelectedControllerIndexKey = @"SJTSelectedControllerIndexKey";
 /** tabBar被选中的通知 - 被点击的控制器的key */
-UIKIT_EXTERN NSString * const SJTSelectedControllerKey = @"SJTSelectedControllerKey";
+NSString * const SJTSelectedControllerKey = @"SJTSelectedControllerKey";
+
+
+/** 标签-间距 */
+CGFloat const SJTTagMargin = 5;
+/** 标签-高度 */
+CGFloat const SJTTagH = 25;

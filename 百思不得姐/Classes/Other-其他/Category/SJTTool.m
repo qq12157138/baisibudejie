@@ -273,6 +273,104 @@
     return blurView;
 }
 
+/**
+ 设置本地通知
+ 
+ @param alertTime 几秒后提示
+ @param title     app在后台要提示的文字
+ @param userDict  点击提示或app在前台的提示
+ 
+ 在App被显示到前台可以在applicationDidBecomeActive中写清空标识
+ //取消徽章
+ [[UIApplication sharedApplication] setApplicationIconBadgeNumber:0];
+ 
+ 在AppDelegate中的通知回调函数didReceiveLocalNotification
+ NSString *notMess = [notification.userInfo objectForKey:@"key"];
+ UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"本地通知(前台)" message:notMess delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+ [alert show];
+ // 更新显示的徽章个数
+ [SJTTool sjt_updateLocationNotification];
+ // 在不需要再推送时，可以取消推送
+ [SJTTool sjt_cancelLocalNotificationWithKey:@"key"];
+ */
++ (void)sjt_registerLocalNotification:(NSInteger)alertTime title:(NSString *)title userInfo:(NSDictionary *)userDict {
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    // 设置触发通知的时间
+    NSDate *fireDate = [NSDate dateWithTimeIntervalSinceNow:alertTime];
+    
+    notification.fireDate = fireDate;
+    // 时区
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    // 设置重复的间隔
+    notification.repeatInterval = kCFCalendarUnitSecond;
+    
+    // 通知内容
+    notification.alertBody = title;
+    notification.applicationIconBadgeNumber = 1;
+    // 通知被触发时播放的声音
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    // 通知参数
+    notification.userInfo = userDict;
+    
+    // ios8后，需要添加这个注册，才能得到授权
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        UIUserNotificationType type =  UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound;
+        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type
+                                                                                 categories:nil];
+        [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+        // 通知重复提示的单位，可以是天、周、月
+        notification.repeatInterval = NSCalendarUnitDay;
+    } else {
+        // 通知重复提示的单位，可以是天、周、月
+        notification.repeatInterval = NSDayCalendarUnit;
+    }
+    
+    // 执行通知注册
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+}
+
+/**
+ 通知数减1
+ */
++ (void)sjt_updateLocationNotification {
+    // 更新显示的徽章个数
+    NSInteger badge = [UIApplication sharedApplication].applicationIconBadgeNumber;
+    badge--;
+    badge = badge >= 0 ? badge : 0;
+    [UIApplication sharedApplication].applicationIconBadgeNumber = badge;
+}
+
+/**
+ 通知数改为几？
+ */
++ (void)sjt_updateLocationNotification:(NSInteger)num {
+    [[UIApplication sharedApplication] setApplicationIconBadgeNumber:num];
+}
+
+/**
+ 取消某个本地推送通知
+ 
+ @param key 这个key对应你设置通知时传入的字典对应的key
+ */
++ (void)sjt_cancelLocalNotificationWithKey:(NSString *)key {
+    // 获取所有本地通知数组
+    NSArray *localNotifications = [UIApplication sharedApplication].scheduledLocalNotifications;
+    
+    for (UILocalNotification *notification in localNotifications) {
+        NSDictionary *userInfo = notification.userInfo;
+        if (userInfo) {
+            // 根据设置通知参数时指定的key来获取通知参数
+            NSString *info = userInfo[key];
+            
+            // 如果找到需要取消的通知，则取消
+            if (info != nil) {
+                [[UIApplication sharedApplication] cancelLocalNotification:notification];
+                break;
+            }
+        }
+    }
+}
+
 @end
 
 @implementation UIImage (SJT)

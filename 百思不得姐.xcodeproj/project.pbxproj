@@ -11,6 +11,9 @@
 		8E1DC32F1C815A62006F51A9 /* SJTShowPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1DC32E1C815A62006F51A9 /* SJTShowPictureView.m */; };
 		8E1DC3311C815ABE006F51A9 /* SJTShowPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1DC3301C815ABE006F51A9 /* SJTShowPictureView.xib */; };
 		8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3CA5A61C78539700B5E45C /* Assets.xcassets */; };
+		8E482DA41C8934AB00057386 /* SJTAddTagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E482DA31C8934AB00057386 /* SJTAddTagViewController.m */; };
+		8E482DA71C8959A500057386 /* SJTTagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E482DA61C8959A500057386 /* SJTTagButton.m */; };
+		8E482DAA1C89891C00057386 /* SJTTagTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E482DA91C89891C00057386 /* SJTTagTextField.m */; };
 		8E4BFBD41C854878005DA2C0 /* SJTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BFBD31C854878005DA2C0 /* SJTUser.m */; };
 		8E4BFBD71C854A2B005DA2C0 /* SJTComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BFBD61C854A2B005DA2C0 /* SJTComment.m */; };
 		8E4BFBDB1C85628E005DA2C0 /* SJTCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E4BFBD91C85628E005DA2C0 /* SJTCommentViewController.m */; };
@@ -89,6 +92,12 @@
 		8E3CA5861C784F6900B5E45C /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E3CA59A1C784F6A00B5E45C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E3CA5A61C78539700B5E45C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E482DA21C8934AB00057386 /* SJTAddTagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTAddTagViewController.h; sourceTree = "<group>"; };
+		8E482DA31C8934AB00057386 /* SJTAddTagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTAddTagViewController.m; sourceTree = "<group>"; };
+		8E482DA51C8959A500057386 /* SJTTagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTagButton.h; sourceTree = "<group>"; };
+		8E482DA61C8959A500057386 /* SJTTagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTagButton.m; sourceTree = "<group>"; };
+		8E482DA81C89891C00057386 /* SJTTagTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTagTextField.h; sourceTree = "<group>"; };
+		8E482DA91C89891C00057386 /* SJTTagTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTagTextField.m; sourceTree = "<group>"; };
 		8E4BFBD21C854878005DA2C0 /* SJTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTUser.h; sourceTree = "<group>"; };
 		8E4BFBD31C854878005DA2C0 /* SJTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTUser.m; sourceTree = "<group>"; };
 		8E4BFBD51C854A2B005DA2C0 /* SJTComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTComment.h; sourceTree = "<group>"; };
@@ -591,6 +600,8 @@
 			children = (
 				8ED2EFAA1C88380B00EEBC27 /* SJTPostWordViewController.h */,
 				8ED2EFAB1C88380B00EEBC27 /* SJTPostWordViewController.m */,
+				8E482DA21C8934AB00057386 /* SJTAddTagViewController.h */,
+				8E482DA31C8934AB00057386 /* SJTAddTagViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -613,6 +624,10 @@
 				8ED2EFB01C887A5600EEBC27 /* SJTAddTagToolbar.h */,
 				8ED2EFB11C887A5600EEBC27 /* SJTAddTagToolbar.m */,
 				8ED2EFB31C887A7100EEBC27 /* SJTAddTagToolbar.xib */,
+				8E482DA51C8959A500057386 /* SJTTagButton.h */,
+				8E482DA61C8959A500057386 /* SJTTagButton.m */,
+				8E482DA81C89891C00057386 /* SJTTagTextField.h */,
+				8E482DA91C89891C00057386 /* SJTTagTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -781,6 +796,7 @@
 				8E7944181C7AEFA300AD9E75 /* SJTTabBarController.m in Sources */,
 				8E4BFBD41C854878005DA2C0 /* SJTUser.m in Sources */,
 				8E5E21DB1C880791000D43B2 /* SJTMeCell.m in Sources */,
+				8E482DA41C8934AB00057386 /* SJTAddTagViewController.m in Sources */,
 				8E7944151C7AEFA300AD9E75 /* SJTTool.m in Sources */,
 				8E79444D1C7B536500AD9E75 /* SJTRecommendCategory.m in Sources */,
 				8E7944431C7AF9D300AD9E75 /* SJTNavigationController.m in Sources */,
@@ -796,12 +812,14 @@
 				8ED2EFB21C887A5600EEBC27 /* SJTAddTagToolbar.m in Sources */,
 				8E7944121C7AEFA300AD9E75 /* SJTNewViewController.m in Sources */,
 				8E922F111C7DA1FA004CF9CE /* SJTVerticalButton.m in Sources */,
+				8E482DA71C8959A500057386 /* SJTTagButton.m in Sources */,
 				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,
 				8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */,
 				8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */,
 				8EFBD3811C801B45000F5379 /* NSDate+SJTExtension.m in Sources */,
 				8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */,
 				8E4BFBEA1C860D06005DA2C0 /* SJTTopWindow.m in Sources */,
+				8E482DAA1C89891C00057386 /* SJTTagTextField.m in Sources */,
 				8E7944401C7AEFA300AD9E75 /* SJTTabBar.m in Sources */,
 				8EFBD3871C805739000F5379 /* SJTTopicPictureView.m in Sources */,
 				8EF5232F1C7BFFF100AE987E /* SJTRecommendUserCell.m in Sources */,

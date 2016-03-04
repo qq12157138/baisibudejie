@@ -12,7 +12,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="07R-F1-El3" userLabel="顶部">
-                    <rect key="frame" x="0.0" y="0.0" width="387" height="66"/>
+                    <rect key="frame" x="5" y="0.0" width="377" height="56"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t2z-Tf-ici" userLabel="底部">
@@ -60,20 +60,20 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="07R-F1-El3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="2Qn-AP-wvh"/>
+                <constraint firstAttribute="top" secondItem="07R-F1-El3" secondAttribute="top" id="2Qn-AP-wvh"/>
                 <constraint firstItem="t2z-Tf-ici" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DwL-QX-gKO"/>
-                <constraint firstItem="t2z-Tf-ici" firstAttribute="top" secondItem="07R-F1-El3" secondAttribute="bottom" id="FR3-9R-YJZ"/>
+                <constraint firstItem="t2z-Tf-ici" firstAttribute="top" secondItem="07R-F1-El3" secondAttribute="bottom" constant="10" id="FR3-9R-YJZ"/>
                 <constraint firstAttribute="bottom" secondItem="t2z-Tf-ici" secondAttribute="bottom" id="Hgh-fZ-Nn3"/>
                 <constraint firstAttribute="trailing" secondItem="t2z-Tf-ici" secondAttribute="trailing" id="gfD-RK-0iG"/>
-                <constraint firstAttribute="trailing" secondItem="07R-F1-El3" secondAttribute="trailing" id="mI9-b0-IRR"/>
-                <constraint firstItem="07R-F1-El3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ngI-ty-hln"/>
+                <constraint firstAttribute="trailing" secondItem="07R-F1-El3" secondAttribute="trailing" constant="5" id="mI9-b0-IRR"/>
+                <constraint firstItem="07R-F1-El3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="ngI-ty-hln"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="topView" destination="07R-F1-El3" id="7XV-4i-Rcj"/>
             </connections>
-            <point key="canvasLocation" x="276.5" y="293.5"/>
+            <point key="canvasLocation" x="81.5" y="293.5"/>
         </view>
     </objects>
     <resources>

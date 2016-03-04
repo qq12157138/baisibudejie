@@ -70,6 +70,23 @@
  */
 + (UIVisualEffectView *)sjt_bgBluEffectWithFrame:(CGRect)frame;
 
+/**
+ 设置本地通知
+ */
++ (void)sjt_registerLocalNotification:(NSInteger)alertTime title:(NSString *)title userInfo:(NSDictionary *)userDict;
+/**
+ 通知数减1
+ */
++ (void)sjt_updateLocationNotification;
+/**
+ 通知数改为几？
+ */
++ (void)sjt_updateLocationNotification:(NSInteger)num;
+/**
+ 取消某个本地推送通知
+ */
++ (void)sjt_cancelLocalNotificationWithKey:(NSString *)key;
+
 @end
 
 @interface UIImage (SJT)

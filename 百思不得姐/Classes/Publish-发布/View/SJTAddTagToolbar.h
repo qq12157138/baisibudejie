@@ -10,4 +10,7 @@
 
 @interface SJTAddTagToolbar : UIView
 
+/** 存储全部标签 */
+@property (nonatomic, strong) NSArray *tags;
+
 @end

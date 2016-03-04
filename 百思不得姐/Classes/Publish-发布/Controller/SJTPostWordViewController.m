@@ -9,6 +9,7 @@
 #import "SJTPostWordViewController.h"
 #import "SJTPlaceholderTextView.h"
 #import "SJTAddTagToolbar.h"
+#import <SVProgressHUD.h>
 
 @interface SJTPostWordViewController () <UITextViewDelegate>
 
@@ -68,6 +69,8 @@
     textView.delegate = self;
     [self.view addSubview:textView];
     self.textView = textView;
+    
+    [self.textView becomeFirstResponder];
 }
 
 - (void)setupNav {
@@ -84,7 +87,18 @@
 }
 
 - (void)post {
-    
+    if (self.toolbar.tags) {
+        NSString *tagStr = @"";
+        for (NSString *tag in self.toolbar.tags) {
+            tagStr = [tagStr stringByAppendingString:tag];
+            tagStr = [tagStr stringByAppendingString:@","];
+        }
+        tagStr = [tagStr substringToIndex:tagStr.length - 1];
+
+        NSDictionary *dict = @{@"key" : tagStr};
+        [SJTTool sjt_registerLocalNotification:4 title:self.textView.text userInfo:dict];
+        [SVProgressHUD showSuccessWithStatus:@"通知发送成功，4秒后返回" maskType:(SVProgressHUDMaskTypeBlack)];
+    }
 }
 
 #pragma mark - <UITextViewDelegate>
