@@ -96,7 +96,7 @@
     
     // 整体的高度
     CGFloat oldH = self.height;
-    self.height = CGRectGetMaxY(self.addButton.frame) + 45;
+    self.height = CGRectGetMaxY(self.addButton.frame) + 45 + 22;
     self.y -= self.height - oldH;
 }
 
@@ -113,7 +113,7 @@
     for (int i = 0; i<tags.count; i++) {
         UILabel *tagLabel = [[UILabel alloc] init];
         [tagLabel.layer setMasksToBounds:YES];
-        [tagLabel.layer setCornerRadius:10.0];
+        [tagLabel.layer setCornerRadius:SJTTagRadius];
         [self.tagLabels addObject:tagLabel];
         tagLabel.backgroundColor = SJTTagBg;
         tagLabel.text = tags[i];

@@ -77,6 +77,10 @@
     self.title = @"发表文字";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:(UIBarButtonItemStyleDone) target:self action:@selector(cancel)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发表" style:(UIBarButtonItemStyleDone) target:self action:@selector(post)];
+    
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor redColor]} forState:UIControlStateNormal];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName : SJTColor(255, 188, 188)} forState:UIControlStateDisabled];
+    
     self.navigationItem.rightBarButtonItem.enabled = NO;    // 默认不能点击
     // 强制刷新，否则appearance设置不生效
     [self.navigationController.navigationBar layoutIfNeeded];
@@ -84,6 +88,7 @@
 
 - (void)cancel {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.view endEditing:YES];
 }
 
 - (void)post {

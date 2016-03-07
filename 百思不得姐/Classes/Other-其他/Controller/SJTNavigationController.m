@@ -44,6 +44,9 @@
     [super viewDidLoad];
     [UIApplication sharedApplication].statusBarHidden = NO;
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    
+    // 自定义返回按钮需要清空代理，才有手势返回
+    self.interactivePopGestureRecognizer.delegate = nil;
 }
 
 

@@ -25,9 +25,6 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     
-//    SJTTabBarController *tabBarController = [[SJTTabBarController alloc] init];
-//    tabBarController.delegate = self;
-    
     // 设置窗口的根控制器
     self.window.rootViewController = [[SJTTabBarController alloc] init];
     

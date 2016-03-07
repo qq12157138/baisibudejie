@@ -90,38 +90,5 @@
 @end
 
 @interface UIImage (SJT)
-/**
- *  加模糊效果函数，传入参数：image是图片，blur是模糊度（0~2.0之间）
- */
-- (UIImage *)sjt_blurryImage:(UIImage *)image withBlurLevel:(CGFloat)blur;
-
-/**
- 圆形头像
- */
-+ (UIImage *)sjt_imageWithRoundImage:(UIImage *)image border:(CGFloat)border borderColor:(UIColor *)borderColor;
-/**
- 圆形头像
- */
-- (UIImage *)sjt_circleImage;
-
-/**
- 截屏
- */
-+ (UIImage *)sjt_imageWithCaptureView:(UIView *)view;
-
-/**
- 拉伸图片
- */
-+ (UIImage *)sjt_imageWithResizable:(UIImage *)image;
-
-/**
- 按比例缩放图片
- */
-- (UIImage *)sjt_imageCompressForSize:(UIImage *)sourceImage targetSize:(CGSize)size;
-
-/**
- 指定宽度按比例缩放图片
- */
-- (UIImage *)sjt_imageCompressForWidth:(UIImage *)sourceImage targetWidth:(CGFloat)defineWidth;
 
 @end

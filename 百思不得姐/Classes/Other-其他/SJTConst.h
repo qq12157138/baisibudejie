@@ -50,4 +50,6 @@ UIKIT_EXTERN NSString * const SJTSelectedControllerKey;
 /** 标签-间距 */
 UIKIT_EXTERN CGFloat const SJTTagMargin;
 /** 标签-高度 */
-UIKIT_EXTERN CGFloat const SJTTagH;
+UIKIT_EXTERN CGFloat const SJTTagH;;
+/** 标签-圆角弧度 */
+UIKIT_EXTERN CGFloat const SJTTagRadius;

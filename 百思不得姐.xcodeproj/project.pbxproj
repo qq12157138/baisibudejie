@@ -56,6 +56,7 @@
 		8E922F161C7DB3B6004CF9CE /* SJTPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E922F151C7DB3B6004CF9CE /* SJTPushGuideView.xib */; };
 		8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */; };
 		8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */; };
+		8EAA48BE1C8A8E2E001721ED /* SJTSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EAA48BD1C8A8E2E001721ED /* SJTSettingViewController.m */; };
 		8EB2AC4B1C847E4B0090620A /* SJTTopicVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4A1C847E4B0090620A /* SJTTopicVoiceView.m */; };
 		8EB2AC4D1C847E580090620A /* SJTTopicVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4C1C847E580090620A /* SJTTopicVoiceView.xib */; };
 		8EB2AC501C8489B30090620A /* SJTTopicVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2AC4F1C8489B30090620A /* SJTTopicVideoView.m */; };
@@ -63,6 +64,11 @@
 		8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C5E1C7F022C001C6817 /* SJTTItleButton.m */; };
 		8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C611C7F3666001C6817 /* SJTTopic.m */; };
 		8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EBF0C641C7F4A38001C6817 /* SJTConst.m */; };
+		8ECDF7F01C8D0E3100E5D8C9 /* SJTLoginTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDF7EF1C8D0E3100E5D8C9 /* SJTLoginTool.m */; };
+		8ECDF7F21C8D212B00E5D8C9 /* colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8ECDF7F11C8D212B00E5D8C9 /* colors.plist */; };
+		8ECDF7F71C8D274700E5D8C9 /* Skins in Resources */ = {isa = PBXBuildFile; fileRef = 8ECDF7F61C8D274700E5D8C9 /* Skins */; };
+		8ECDF7FA1C8D279900E5D8C9 /* UIColor+SJTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDF7F91C8D279900E5D8C9 /* UIColor+SJTExtension.m */; };
+		8ECDF7FD1C8D27C200E5D8C9 /* UIImage+SJTExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECDF7FC1C8D27C200E5D8C9 /* UIImage+SJTExtension.m */; };
 		8ED2EFA81C88372B00EEBC27 /* SJTPublishView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFA61C88372B00EEBC27 /* SJTPublishView.m */; };
 		8ED2EFA91C88372B00EEBC27 /* SJTPublishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ED2EFA71C88372B00EEBC27 /* SJTPublishView.xib */; };
 		8ED2EFAC1C88380B00EEBC27 /* SJTPostWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ED2EFAB1C88380B00EEBC27 /* SJTPostWordViewController.m */; };
@@ -172,6 +178,8 @@
 		8E9567251C7FF3BD00C3B908 /* SJTTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicCell.h; sourceTree = "<group>"; };
 		8E9567261C7FF3BD00C3B908 /* SJTTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicCell.m; sourceTree = "<group>"; };
 		8E9567271C7FF3BD00C3B908 /* SJTTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTTopicCell.xib; sourceTree = "<group>"; };
+		8EAA48BC1C8A8E2E001721ED /* SJTSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTSettingViewController.h; sourceTree = "<group>"; };
+		8EAA48BD1C8A8E2E001721ED /* SJTSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTSettingViewController.m; sourceTree = "<group>"; };
 		8EB2AC491C847E4B0090620A /* SJTTopicVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTTopicVoiceView.h; sourceTree = "<group>"; };
 		8EB2AC4A1C847E4B0090620A /* SJTTopicVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopicVoiceView.m; sourceTree = "<group>"; };
 		8EB2AC4C1C847E580090620A /* SJTTopicVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTTopicVoiceView.xib; sourceTree = "<group>"; };
@@ -184,6 +192,14 @@
 		8EBF0C611C7F3666001C6817 /* SJTTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTTopic.m; sourceTree = "<group>"; };
 		8EBF0C631C7F4A38001C6817 /* SJTConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTConst.h; sourceTree = "<group>"; };
 		8EBF0C641C7F4A38001C6817 /* SJTConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTConst.m; sourceTree = "<group>"; };
+		8ECDF7EE1C8D0E3100E5D8C9 /* SJTLoginTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTLoginTool.h; sourceTree = "<group>"; };
+		8ECDF7EF1C8D0E3100E5D8C9 /* SJTLoginTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTLoginTool.m; sourceTree = "<group>"; };
+		8ECDF7F11C8D212B00E5D8C9 /* colors.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = colors.plist; sourceTree = "<group>"; };
+		8ECDF7F61C8D274700E5D8C9 /* Skins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Skins; sourceTree = "<group>"; };
+		8ECDF7F81C8D279900E5D8C9 /* UIColor+SJTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SJTExtension.h"; sourceTree = "<group>"; };
+		8ECDF7F91C8D279900E5D8C9 /* UIColor+SJTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SJTExtension.m"; sourceTree = "<group>"; };
+		8ECDF7FB1C8D27C200E5D8C9 /* UIImage+SJTExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+SJTExtension.h"; sourceTree = "<group>"; };
+		8ECDF7FC1C8D27C200E5D8C9 /* UIImage+SJTExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+SJTExtension.m"; sourceTree = "<group>"; };
 		8ED2EFA51C88372B00EEBC27 /* SJTPublishView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTPublishView.h; sourceTree = "<group>"; };
 		8ED2EFA61C88372B00EEBC27 /* SJTPublishView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTPublishView.m; sourceTree = "<group>"; };
 		8ED2EFA71C88372B00EEBC27 /* SJTPublishView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SJTPublishView.xib; sourceTree = "<group>"; };
@@ -269,8 +285,10 @@
 		8E3CA5891C784F6900B5E45C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8ECDF7F61C8D274700E5D8C9 /* Skins */,
 				8E3CA5A61C78539700B5E45C /* Assets.xcassets */,
 				8E3CA59A1C784F6A00B5E45C /* Info.plist */,
+				8ECDF7F11C8D212B00E5D8C9 /* colors.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -429,6 +447,8 @@
 				8E5E21E51C882226000D43B2 /* SJTWebViewController.h */,
 				8E5E21E61C882226000D43B2 /* SJTWebViewController.m */,
 				8E5E21E71C882226000D43B2 /* SJTWebViewController.xib */,
+				8EAA48BC1C8A8E2E001721ED /* SJTSettingViewController.h */,
+				8EAA48BD1C8A8E2E001721ED /* SJTSettingViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -500,6 +520,8 @@
 				8E79440B1C7AEFA300AD9E75 /* PrefixHeader.pch */,
 				8EBF0C631C7F4A38001C6817 /* SJTConst.h */,
 				8EBF0C641C7F4A38001C6817 /* SJTConst.m */,
+				8ECDF7EE1C8D0E3100E5D8C9 /* SJTLoginTool.h */,
+				8ECDF7EF1C8D0E3100E5D8C9 /* SJTLoginTool.m */,
 			);
 			path = "Other-其他";
 			sourceTree = "<group>";
@@ -518,6 +540,10 @@
 				8EFBD3801C801B45000F5379 /* NSDate+SJTExtension.m */,
 				8E5E21D61C87E2A9000D43B2 /* UIImageView+SJTExtension.h */,
 				8E5E21D71C87E2A9000D43B2 /* UIImageView+SJTExtension.m */,
+				8ECDF7F81C8D279900E5D8C9 /* UIColor+SJTExtension.h */,
+				8ECDF7F91C8D279900E5D8C9 /* UIColor+SJTExtension.m */,
+				8ECDF7FB1C8D27C200E5D8C9 /* UIImage+SJTExtension.h */,
+				8ECDF7FC1C8D27C200E5D8C9 /* UIImage+SJTExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -709,6 +735,7 @@
 				8E3CA5A71C78539700B5E45C /* Assets.xcassets in Resources */,
 				8E7944451C7B0B5800AD9E75 /* SJTFriendTrendsViewController.xib in Resources */,
 				8ED2EFB41C887A7100EEBC27 /* SJTAddTagToolbar.xib in Resources */,
+				8ECDF7F21C8D212B00E5D8C9 /* colors.plist in Resources */,
 				8EE90CDC1C7C66A70044BCB8 /* SJTRecommendTagCell.xib in Resources */,
 				8E4BFBE41C85D0DA005DA2C0 /* SJTCommentCell.xib in Resources */,
 				8E9567291C7FF3BD00C3B908 /* SJTTopicCell.xib in Resources */,
@@ -718,6 +745,7 @@
 				8E79444A1C7B49E500AD9E75 /* SJTRecommendViewController.xib in Resources */,
 				8EB2AC521C8489BF0090620A /* SJTTopicVideoView.xib in Resources */,
 				8EB2AC4D1C847E580090620A /* SJTTopicVoiceView.xib in Resources */,
+				8ECDF7F71C8D274700E5D8C9 /* Skins in Resources */,
 				8E922F0F1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.xib in Resources */,
 				8E922F161C7DB3B6004CF9CE /* SJTPushGuideView.xib in Resources */,
 			);
@@ -781,7 +809,9 @@
 				8E1DC32F1C815A62006F51A9 /* SJTShowPictureView.m in Sources */,
 				8EBF0C5F1C7F022C001C6817 /* SJTTItleButton.m in Sources */,
 				8E5E21D81C87E2A9000D43B2 /* UIImageView+SJTExtension.m in Sources */,
+				8EAA48BE1C8A8E2E001721ED /* SJTSettingViewController.m in Sources */,
 				8E922F0E1C7DA1FA004CF9CE /* SJTLoginRegisterViewController.m in Sources */,
+				8ECDF7FA1C8D279900E5D8C9 /* UIColor+SJTExtension.m in Sources */,
 				8E5E21DE1C880C3F000D43B2 /* SJTMeFooterView.m in Sources */,
 				8EBF0C651C7F4A38001C6817 /* SJTConst.m in Sources */,
 				8EB2AC501C8489B30090620A /* SJTTopicVideoView.m in Sources */,
@@ -816,6 +846,7 @@
 				8E7944511C7B558400AD9E75 /* SJTRecommendCategoryCell.m in Sources */,
 				8E922F101C7DA1FA004CF9CE /* SJTTextField.m in Sources */,
 				8EBF0C621C7F3666001C6817 /* SJTTopic.m in Sources */,
+				8ECDF7F01C8D0E3100E5D8C9 /* SJTLoginTool.m in Sources */,
 				8EFBD3811C801B45000F5379 /* NSDate+SJTExtension.m in Sources */,
 				8E9567281C7FF3BD00C3B908 /* SJTTopicCell.m in Sources */,
 				8E4BFBEA1C860D06005DA2C0 /* SJTTopWindow.m in Sources */,
@@ -832,6 +863,7 @@
 				8E7944141C7AEFA300AD9E75 /* Foundation+Log.m in Sources */,
 				8E922F141C7DB3A5004CF9CE /* SJTPushGuideView.m in Sources */,
 				8EE90CD71C7C65610044BCB8 /* SJTRecommendTag.m in Sources */,
+				8ECDF7FD1C8D27C200E5D8C9 /* UIImage+SJTExtension.m in Sources */,
 				8E5E21E11C881052000D43B2 /* SJTSquare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

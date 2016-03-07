@@ -11,7 +11,7 @@
 #import <UIImageView+WebCache.h>
 #import "SJTPregressView.h"
 
-@interface SJTShowPictureView ()
+@interface SJTShowPictureView () <UIActionSheetDelegate>
 
 /** 点击后的图片 */
 @property (nonatomic, weak) UIImageView *imageView;
@@ -103,27 +103,20 @@ static UIWindow *window_;
 }
 
 - (IBAction)save {
-    UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-    __weak SJTShowPictureView *selfWeak = self;
-    [alert addAction:[UIAlertAction actionWithTitle:@"保存图片" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        if (selfWeak.imageView.image == nil) {
+    UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"保存", nil];
+    [sheet showInView:self.window];
+
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 0) {
+        if (self.imageView.image == nil) {
             [SVProgressHUD showErrorWithStatus:@"图片并未下载完毕"];
             return;
         }
         // 将图片写入相册
-        UIImageWriteToSavedPhotosAlbum(selfWeak.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-    }]];
-    
-//    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//        
-//    }]];
-    
-    [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-        
-    }]];
-    
-    [window.rootViewController presentViewController:alert animated:YES completion:nil];
+        UIImageWriteToSavedPhotosAlbum(self.imageView.image, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+    }
 }
 
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {

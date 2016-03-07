@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>normal</key>
+	<dict>
+		<key>cellTextColor</key>
+		<string>200,190,125</string>
+		<key>cellBgColor</key>
+		<string>189,78,69</string>
+	</dict>
+	<key>night</key>
+	<dict>
+		<key>cellTextColor</key>
+		<string>200,200,200</string>
+		<key>cellBgColor</key>
+		<string>19,89,179</string>
+	</dict>
+</dict>
+</plist>

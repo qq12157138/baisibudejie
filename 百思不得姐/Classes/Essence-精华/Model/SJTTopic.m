@@ -90,23 +90,25 @@
         
         // 根据段子的类型来计算cell 的高度
         if (self.type == SJTTopicPicture) {  // 图片帖子
-            // 图片显示出来的宽度
-            CGFloat pictureW = maxSize.width;
-            // 图片显示出来的高度
-            CGFloat pictureH = pictureW * self.height / self.width;
-            
-            // 图片高度过长就限制高度
-            if (pictureH >= SJTTopicCellPictureMaxH) {
-                self.bigPicture = YES;
-                pictureH = SJTTopicCellPictureBreakH;
+            if (self.width != 0 && self.height != 0) {
+                // 图片显示出来的宽度
+                CGFloat pictureW = maxSize.width;
+                // 图片显示出来的高度
+                CGFloat pictureH = pictureW * self.height / self.width;
+                
+                // 图片高度过长就限制高度
+                if (pictureH >= SJTTopicCellPictureMaxH) {
+                    self.bigPicture = YES;
+                    pictureH = SJTTopicCellPictureBreakH;
+                }
+                
+                // 计算图片控件的frame
+                CGFloat pictureX = SJTTopicCellMargin;
+                CGFloat pictureY = SJTTopicCellTextY + textH + SJTTopicCellMargin;
+                _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
+                
+                _cellHeight += pictureH + SJTTopicCellMargin;
             }
-            
-            // 计算图片控件的frame
-            CGFloat pictureX = SJTTopicCellMargin;
-            CGFloat pictureY = SJTTopicCellTextY + textH + SJTTopicCellMargin;
-            _pictureViewFrame = CGRectMake(pictureX, pictureY, pictureW, pictureH);
-            
-            _cellHeight += pictureH + SJTTopicCellMargin;
         } else if (self.type == SJTTopicVoice) {    // 声音帖子
             CGFloat voiceX = SJTTopicCellMargin;
             CGFloat voiceY = SJTTopicCellTextY + textH + SJTTopicCellMargin;

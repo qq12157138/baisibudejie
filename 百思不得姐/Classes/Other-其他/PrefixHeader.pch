@@ -16,6 +16,7 @@
 #import "UIBarButtonItem+Extension.h"
 #import "SJTTool.h"
 #import "UIImageView+SJTExtension.h"
+#import "UIImage+SJTExtension.h"
 
 // 通知中心
 #define SJTNoteCenter [NSNotificationCenter defaultCenter]

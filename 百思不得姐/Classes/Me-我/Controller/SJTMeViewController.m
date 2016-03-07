@@ -10,6 +10,7 @@
 #import "SJTMeCell.h"
 #import "SJTMeFooterView.h"
 #import <AFNetworking.h>
+#import "SJTSettingViewController.h"
 
 @interface SJTMeViewController ()
 
@@ -59,6 +60,7 @@ static NSString *MeID = @"cell";
 }
 
 - (void)settingClick {
+    [self.navigationController pushViewController:[[SJTSettingViewController alloc] initWithStyle:(UITableViewStyleGrouped)] animated:YES];
 }
 
 - (void)nightModeClick {

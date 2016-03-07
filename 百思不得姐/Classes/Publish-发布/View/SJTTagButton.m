@@ -16,9 +16,12 @@
     if (self) {
         [self setImage:[UIImage imageNamed:@"chose_tag_close_icon"] forState:(UIControlStateNormal)];
         self.titleLabel.font = SJTTagFont;
-        self.backgroundColor = SJTTagBg;
+        self.backgroundColor = [UIColor whiteColor];
+        [self setTitleColor:SJTTagBg forState:UIControlStateNormal];
+        [self.layer setBorderWidth:1.0];
+        self.layer.borderColor = SJTTagBg.CGColor;
         [self.layer setMasksToBounds:YES];
-        [self.layer setCornerRadius:10.0];
+        [self.layer setCornerRadius:SJTTagRadius];
     }
     return self;
 }

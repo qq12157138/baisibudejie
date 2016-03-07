@@ -40,3 +40,5 @@ NSString * const SJTSelectedControllerKey = @"SJTSelectedControllerKey";
 CGFloat const SJTTagMargin = 5;
 /** 标签-高度 */
 CGFloat const SJTTagH = 25;
+/** 标签-圆角弧度 */
+CGFloat const SJTTagRadius = 5;

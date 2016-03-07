@@ -42,14 +42,16 @@
     if (!_addButton) {
         UIButton *addButton = [UIButton buttonWithType:(UIButtonTypeCustom)];
         [addButton.layer setMasksToBounds:YES];
-        [addButton.layer setCornerRadius:10.0];
-        [addButton setTitleColor:[UIColor whiteColor] forState:(UIControlStateNormal)];
+        [addButton.layer setCornerRadius:SJTTagRadius];
         [addButton addTarget:self action:@selector(addButtonClick) forControlEvents:(UIControlEventTouchUpInside)];
         addButton.titleLabel.font = SJTTagFont;
         addButton.contentEdgeInsets = UIEdgeInsetsMake(0, SJTTagMargin, 0, SJTTagMargin);
         // 让按钮内部的文字和图片都左对齐
         addButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        addButton.backgroundColor = SJTTagBg;
+        addButton.backgroundColor = [UIColor whiteColor];
+        [addButton setTitleColor:SJTTagBg forState:UIControlStateNormal];
+        [addButton.layer setBorderWidth:1.0];
+        addButton.layer.borderColor = SJTTagBg.CGColor;
         [self.contentView addSubview:addButton];
         _addButton = addButton;
     }
@@ -150,7 +152,7 @@
         
         // 文字属性
         NSMutableDictionary *attrs = [NSMutableDictionary dictionary];
-        attrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
+        attrs[NSForegroundColorAttributeName] = SJTTagBg;
         // 富文本（NSMutableAttributedString可以设置每个字的颜色、字体、大小等）
         NSMutableAttributedString *tagTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"添加标签: %@" , self.textField.text] attributes:attrs];
         

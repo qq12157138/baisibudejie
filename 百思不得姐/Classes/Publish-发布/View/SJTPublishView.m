@@ -12,6 +12,7 @@
 #import <SVProgressHUD.h>
 #import "SJTPostWordViewController.h"
 #import "SJTNavigationController.h"
+#import "SJTLoginTool.h"
 
 // 动画时间的系数
 static CGFloat const SJTAnimationDelay = 0.05;
@@ -134,6 +135,7 @@ static UIWindow *window_;
 - (void)buttonClick:(UIButton *)button {
     [self closeWithCompletionBlock:^{
         if ([button.titleLabel.text isEqualToString:@"发段子"]) {
+            
             // 弹出发段子控制器
             SJTPostWordViewController *postWord = [[SJTPostWordViewController alloc] init];
             SJTNavigationController *nav = [[SJTNavigationController alloc] initWithRootViewController:postWord];

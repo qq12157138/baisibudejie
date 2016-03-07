@@ -24,6 +24,11 @@
  */
 - (BOOL)isShowingOnKeyWindow;
 
+/**
+ 获取当前正在显示的控制器
+ */
+- (UIViewController *)getCurrentVC;
+
 + (instancetype)viewFromXib;
 
 @end

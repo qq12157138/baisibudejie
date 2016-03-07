@@ -14,8 +14,9 @@
 #import "SJTTopicVideoView.h"
 #import "SJTComment.h"
 #import "SJTUser.h"
+#import "SJTLoginTool.h"
 
-@interface SJTTopicCell ()
+@interface SJTTopicCell () <UIActionSheetDelegate>
 /** 头像 */
 @property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
 /** 名字 */
@@ -197,26 +198,30 @@
 }
 
 - (IBAction)more {
-//    if (iOS8) {
-//        UIWindow *window = [[UIApplication sharedApplication].windows lastObject];
-//        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
-//        [alert addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//            
-//        }]];
-//        
-//        //    [alert addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
-//        //
-//        //    }]];
-//        
-//        [alert addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
-//            
-//        }]];
-//        
-//        [window.rootViewController presentViewController:alert animated:YES completion:nil];
-//    } else {
-        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:nil cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
+    if (iOS8) {
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+        [alert addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            if ([SJTLoginTool getUid:YES] == nil) return;
+        }]];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            if ([SJTLoginTool getUid:YES] == nil) return;
+        }]];
+        
+        [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+            
+        }]];
+        
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    } else {
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"收藏", @"举报", nil];
         [sheet showInView:self.window];
-//    }
+    }
+
+}
+
+#pragma mark - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex {
     
 }
 
