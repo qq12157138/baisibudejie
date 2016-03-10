@@ -8,6 +8,7 @@
 
 #import "SJTSettingViewController.h"
 #import <SDImageCache.h>
+#import <SVProgressHUD.h>
 
 @interface SJTSettingViewController ()
 
@@ -29,7 +30,6 @@
     // 获得文件夹内部的所有内容
 //    NSArray *contents = [manager contentsOfDirectoryAtPath:cachePath error:nil];
     NSArray *subpaths = [manager subpathsAtPath:cachePath];
-    SJTLog(@"%@", subpaths);
 }
 
 - (void)getSize {
@@ -77,6 +77,9 @@
     [[SDImageCache sharedImageCache] clearDisk];
     
 //    [[NSFileManager defaultManager] removeItemAtPath:<#(nonnull NSString *)#> error:nil];
+    
+    [SVProgressHUD showSuccessWithStatus:@"清除成功"];
+    [self.tableView reloadData];
 }
 
 @end

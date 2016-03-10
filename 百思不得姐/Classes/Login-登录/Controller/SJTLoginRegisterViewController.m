@@ -26,7 +26,9 @@
     
     // 设置导航栏颜色
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [SJTTopWindowViewController showWithStyle:UIStatusBarStyleLightContent statusBarHidden:NO];
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,6 +71,7 @@
 - (IBAction)back {
     [self dismissViewControllerAnimated:YES completion:nil];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+    [SJTTopWindowViewController showWithStyle:UIStatusBarStyleDefault statusBarHidden:NO];
 }
 
 /**

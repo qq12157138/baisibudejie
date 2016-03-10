@@ -17,6 +17,7 @@
 #import "SJTTool.h"
 #import "UIImageView+SJTExtension.h"
 #import "UIImage+SJTExtension.h"
+#import "SJTTopWindowViewController.h"
 
 // 通知中心
 #define SJTNoteCenter [NSNotificationCenter defaultCenter]

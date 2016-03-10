@@ -72,7 +72,7 @@
     // 标签栏整体
     UIScrollView *titleScrollView = [[UIScrollView alloc] init];
     titleScrollView.frame = CGRectMake(0, SJTTitleViewY, self.view.width, SJTTitleViewH);
-    titleScrollView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
+    [self.view addSubview:[SJTTool sjt_bgBluEffectWithFrame:titleScrollView.frame]];
     [self.view addSubview:titleScrollView];
     self.titleScrollView = titleScrollView;
     

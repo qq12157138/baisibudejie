@@ -29,15 +29,22 @@ static NSString *MeID = @"cell";
     
 }
 
+- (void)viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    // 设置scrollView其他属性
+    self.tableView.contentSize = CGSizeMake(self.tableView.width, self.tableView.height + 40);
+}
+
 - (void)setupNav {
     // 设置导航栏标题
     self.navigationItem.title = @"我的";
     //    self.title = @"我的";
-    
     // 设置导航栏左边的按钮
     UIBarButtonItem *settingItem = [UIBarButtonItem itemWithTarget:self action:@selector(settingClick) image:@"mine-setting-icon" highImage:@"mine-setting-icon-click"];
     UIBarButtonItem *nightModeItem = [UIBarButtonItem itemWithTarget:self action:@selector(nightModeClick) image:@"mine-moon-icon" highImage:@"mine-moon-icon-click"];
     self.navigationItem.rightBarButtonItems = @[settingItem, nightModeItem];
+    
 }
 
 - (void)setupTableView {
@@ -57,6 +64,7 @@ static NSString *MeID = @"cell";
     // 设置footerView
     self.tableView.tableFooterView = [[SJTMeFooterView alloc] init];
     
+    [self.tableView setAllowsSelection:NO];
 }
 
 - (void)settingClick {

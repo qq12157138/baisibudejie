@@ -7,22 +7,21 @@
 //
 
 #import "SJTTopWindow.h"
+#import "SJTTopWindowViewController.h"
 
 @implementation SJTTopWindow
 
 static UIWindow *window_;
 
 + (void)show {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        window_ = [[UIWindow alloc] init];
-        window_.windowLevel = UIWindowLevelAlert;
-        window_.frame = [UIApplication sharedApplication].statusBarFrame;
-        window_.backgroundColor = [UIColor clearColor];
-        window_.hidden = NO;
-        [window_ addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topWindowClick)]];
-    });
+    window_ = [[UIWindow alloc] init];
+    window_.windowLevel = UIWindowLevelAlert;
+    window_.frame = [UIApplication sharedApplication].statusBarFrame;
+    window_.backgroundColor = [UIColor clearColor];
+    window_.rootViewController = [SJTTopWindowViewController showWithStyle:UIStatusBarStyleDefault statusBarHidden:NO];
+    window_.hidden = NO;
+    [window_ addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topWindowClick)]];
 }
-
 
 /**
  监听窗口的点击
